@@ -42,21 +42,20 @@
 	<div class="menu-item" id="menu-2"><h2 class="content">Menu Item 2</h2></div>
 	<div class="menu-item" id="menu-3"><h2 class="content">Menu Item 3</h2></div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
 	var base = -100;
 	var shiftVal = 200;
 	var pers = 1000;
 	function moveFront() {
-		$('#menu-1').css({"transform":"perspective("+pers+"px) translateZ("+(base+shiftVal)+"px)"});
-		$('#menu-2').css({"transform":"perspective("+pers+"px) translateZ("+(base)+"px)"});
-		$('#menu-3').css({"transform":"perspective("+pers+"px) translateZ("+(base-shiftVal)+"px)"});
+		document.querySelector('#menu-1').style.transform = "perspective("+pers+"px) translateZ("+(base+shiftVal)+"px)";
+		document.querySelector('#menu-2').style.transform = "perspective("+pers+"px) translateZ("+(base)+"px)";
+		document.querySelector('#menu-3').style.transform = "perspective("+pers+"px) translateZ("+(base-shiftVal)+"px)";
 		base+=shiftVal;
 	}
 	function moveBack() {
-		$('#menu-1').css({"transform":"perspective("+pers+"px) translateZ("+(base-shiftVal)+"px)"});
-		$('#menu-2').css({"transform":"perspective("+pers+"px) translateZ("+(base-2*shiftVal)+"px)"});
-		$('#menu-3').css({"transform":"perspective("+pers+"px) translateZ("+(base-3*shiftVal)+"px)"});
+		document.querySelector('#menu-1').style.transform = "perspective("+pers+"px) translateZ("+(base-shiftVal)+"px)";
+		document.querySelector('#menu-2').style.transform = "perspective("+pers+"px) translateZ("+(base-2*shiftVal)+"px)";
+		document.querySelector('#menu-3').style.transform = "perspective("+pers+"px) translateZ("+(base-3*shiftVal)+"px)";
 		base-=shiftVal;
 	}
 	</script>
