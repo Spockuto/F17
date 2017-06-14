@@ -1,0 +1,40 @@
+div#opening-screen-container {
+  margin-bottom: -4px;
+}
+
+div#castle-door-container {
+  position: absolute;
+  bottom: 218px;
+  left: 50%;
+  height: 111px;
+  transform: translateX(-50%);
+}
+
+div.castle-door {
+  background-color: #e80000;
+  border: 1px solid #7e1a00;
+  width: 42px;
+  height: inherit;
+  display: inline-block;
+}
+
+div.castle-doorknob {
+  position: relative;
+  top: 60%;
+  background-color: #eee;
+  border: 1px solid #7e1a00;
+  border-radius: 11px;
+  width: 11px;
+  height: 11px;
+  transition: background-color 1.3s;
+}
+
+div#castle-doorknob-left {
+  left: 73%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+div#castle-doorknob-right {
+  left: 27%;
+  transform: translateX(-50%) translateY(-50%);
+}
