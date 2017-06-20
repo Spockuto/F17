@@ -13,6 +13,25 @@ body {
   background-color: lightgreen;
 }
 
+/*Background
+
+div.background {
+  position: absolute;
+  width: 100%;
+  hieght: 100%;
+  animation: slide 10s ease infinite;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateY(-50%); }
+}
+
+* The Background image is imagined to be twice the length of the screen. 
+* When one length finishes it resets to make the transition seamless.
+* Width and Height properties will be modified through MQs as the screen size changes.
+*/
+
 div.state-container {
   width: inherit;
   position: absolute;
@@ -24,11 +43,11 @@ img.building {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -10;
+  z-index: 0;
 }
 
 div.door {
-  transition: transform 1.5s, background-color 1.3s;
+  transition: all 2s, transform 1.5s, background-color 1.3s;
 }
 
 div.left-door {
@@ -37,4 +56,24 @@ div.left-door {
 
 div.right-door {
   transform-origin: right;
+}
+
+img.lantern {
+  position: absolute;
+  z-index: 10;
+  width: 60px;
+  animation: float ease-in-out infinite alternate forwards;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10%); }
+}
+
+img.lantern-left {
+  transform: translateX(-50%);
+}
+
+img.lantern-right {
+  transform: translateX(50%);
 }

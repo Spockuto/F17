@@ -7,7 +7,30 @@
 </head>
 
 <body>
+  <div class="background">
+    <!-- Put Mountains Here -->
+  </div>
   <div id="opening-screen-container" class="state-container">
+
+  <!-- These are temporary lanterns placed in random location -->
+  <!-- Image tags for lanterns are currently statically added and styled. -->
+  <!-- Yes i know. Lantern ids look beautiful. It was done in a hurry. -->
+  <!-- All of this is only meant to be temporary. Hopefully it will change later. -->
+    <div id="castle-lanterns-container">
+      <img class="lantern lantern-top lantern-left" id="lantern1" src="images/lantern.png">
+      <img class="lantern lantern-top lantern-right" id="lantern2" src="images/lantern.png">
+      <!-- The next 2 are supposed to be behind the castle -->
+      <img class="lantern lantern-behind lantern-left" id="lantern3" src="images/lantern.png">
+      <img class="lantern lantern-behind lantern-right" id="lantern4" src="images/lantern.png">
+
+      <img class="lantern lantern-front lantern-left" id="lantern5" src="images/lantern.png">
+      <img class="lantern lantern-front lantern-right" id="lantern6" src="images/lantern.png">
+      <img class="lantern lantern-side lantern-left" id="lantern7" src="images/lantern.png">
+      <img class="lantern lantern-side lantern-right" id="lantern8" src="images/lantern.png">
+      <!-- <img class="lantern-ground" id="lantern9" src="images/lantern.png"> -->
+      <!-- ^ Maybe for returning to the previous screen? -->
+    </div>
+
     <img id="castle" class="building" src="images/castle.jpg" alt="castle">
     <div id="castle-door-container">
       <div id="castle-door-left" class="door left-door castle-door">
@@ -17,6 +40,7 @@
         <div id="castle-doorknob-right" class="castle-doorknob"></div>
       </div>
     </div>
+
   </div>
 </body>
 
