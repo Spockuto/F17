@@ -12,23 +12,26 @@ window.addEventListener('keydown', () => {
 
 function openDoors() {
 	doors = document.querySelectorAll('.castle-door');
+	leftDoor = document.querySelector('#castle-door-left');
+	rightDoor = document.querySelector('#castle-door-right');
 	doorknobs = document.querySelectorAll('.castle-doorknob');
 	for (var door of doors) {
-		door.style.transform = "rotateY(80deg)";
 		door.style.backgroundColor = "#a50101";
 	}
 	for (var doorknob of doorknobs) {
 		doorknob.style.backgroundColor = "#aaa";
 	}
+	leftDoor.style.transform = "rotateY(70deg)";
+	rightDoor.style.transform = "rotateY(-70deg)";
 }
 
 function exit() {
-	zoomFactor = 4;
+	zoomFactor = 15;
 	originY = 55.72 + ( (55.72 - 50)/(zoomFactor - 1) );
 
 	container = document.querySelector('div#opening-screen-container');
-	container.style.transform = `scale(${zoomFactor})`;
-	container.style.transformOrigin = `50% ${originY}%`;
+	container.style.transform = `translateZ(${zoomFactor}em)`;
+	document.body.style.perspectiveOrigin = `50% ${originY}%`;
 	container.style.opacity = 0;
 }
 

@@ -9,6 +9,7 @@ div#castle-door-container {
   left: 50%;
   height: 111px;
   transform: translateX(-50%);
+  perspective: 18.75em;
 }
 
 div.castle-door {

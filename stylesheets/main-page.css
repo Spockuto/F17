@@ -1,8 +1,11 @@
+* {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  user-select: none;
-  -webkit-user-drag: none;
 }
 
 body {
@@ -11,6 +14,20 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: lightgreen;
+  perspective: 20em;
+  transform-style: preserve-3d;
+}
+
+div.state-container {
+  width: inherit;
+  height: inherit;
+  transition: transform 2s, opacity 2s;
+}
+
+div#castle-container {
+  width: inherit;
+  position: absolute;
+  bottom: 0px;
 }
 
 /*Background*/
@@ -31,20 +48,6 @@ div.background img {
  * When one length finishes it resets to make the transition seamless.
  * Width and Height properties should be modified through MQs as the screen size changes.
  */
-
-div.state-container {
-  width: inherit;
-  height : inherit ;
-  /*position: absolute; */
-  /*bottom: 0px; */
-  transition: transform 2s, opacity 2s;
-}
-
-div#castle-container {
-  width: inherit;
-  position: absolute;
-  bottom: 0px;
-}
 
 img.building {
   position: relative;
