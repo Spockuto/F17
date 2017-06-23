@@ -30,11 +30,15 @@ function exit() {
 	perspective = 20;
 	zoomFactor = perspective / (perspective - translateZ);
 
-	doorCenter = 57.21 / 100; 	// Percentage Distance from top of castle 
+	// Percentage Distance of door from top of castle
+	doorCenter = 57.21 / 100;
 	castleHeight = document.querySelector("#castle-container").offsetHeight;
 	screenHeight = window.innerHeight;
 
+	// dist = Dist between originY pt and center of door
 	dist = ( (doorCenter - 1)*castleHeight + screenHeight/2 ) / (zoomFactor - 1);
+
+	// height of pt from the top
 	originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight;
 
 	container = document.querySelector('div#opening-screen-container');
