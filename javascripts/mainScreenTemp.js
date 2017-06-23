@@ -26,11 +26,19 @@ function openDoors() {
 }
 
 function exit() {
-	zoomFactor = 15;
-	originY = 55.72 + ( (55.72 - 50)/(zoomFactor - 1) );
+	translateZ = 20;
+	perspective = 20;
+	zoomFactor = perspective / (perspective - translateZ);
+
+	doorCenter = 57.21 / 100; 	// Percentage Distance from top of castle 
+	castleHeight = document.querySelector("#castle-container").offsetHeight;
+	screenHeight = window.innerHeight;
+
+	dist = ( (doorCenter - 1)*castleHeight + screenHeight/2 ) / (zoomFactor - 1);
+	originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight;
 
 	container = document.querySelector('div#opening-screen-container');
-	container.style.transform = `translateZ(${zoomFactor}em)`;
+	container.style.transform = `translateZ(${translateZ}em)`;
 	document.body.style.perspectiveOrigin = `50% ${originY}%`;
 	container.style.opacity = 0;
 }
@@ -46,6 +54,6 @@ function reset() {
 		doorknob.style.backgroundColor = "#eee";
 	}
 	container = document.querySelector('#opening-screen-container');
-	container.style.transform = "scale(1)";
+	container.style.transform = "translateZ(0px)";
 	container.style.opacity = 1;
 }
