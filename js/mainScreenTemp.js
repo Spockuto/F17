@@ -6,10 +6,6 @@ window.addEventListener('click', () => {
 	setTimeout(exit, 500);
 });
 
-window.addEventListener('keydown', () => {
-	reset();
-});
-
 function openDoors() {
 	doors = document.querySelectorAll('.castle-door');
 	leftDoor = document.querySelector('#castle-door-left');
@@ -45,6 +41,13 @@ function exit() {
 	container.style.transform = `translateZ(${translateZ}em)`;
 	document.body.style.perspectiveOrigin = `50% ${originY}%`;
 	container.style.opacity = 0;
+	setTimeout(function() {
+		document.querySelector('#opening-screen-container').style.display = 'none';
+		document.querySelector('#headline').style.display = '';
+		$('#headline').animate({
+			'opacity': 1,
+		},1000);
+	},1300);
 }
 
 function reset() {
@@ -60,4 +63,5 @@ function reset() {
 	container = document.querySelector('#opening-screen-container');
 	container.style.transform = "translateZ(0px)";
 	container.style.opacity = 1;
+	document.querySelector('#opening-screen-container').style.display = '';
 }

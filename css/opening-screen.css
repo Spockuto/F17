@@ -1,5 +1,15 @@
+@font-face {
+  font-family: GangOfThree;
+  src: url('../fonts/gangofthree.ttf');
+  font-weight: bold;
+}
+
 div#castle-container {
   margin-bottom: -4px;
+}
+
+h1 {
+  font-size: 5em;
 }
 
 /*DOOR*/
@@ -40,6 +50,22 @@ div#castle-doorknob-left {
 div#castle-doorknob-right {
   left: 27%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+div#headline {
+  font-family: GangOfThree;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  text-align: center;
+}
+
+div#headline-container {
+  position: relative;
+  left: -50%;
+  top: -50%;
+  text-shadow: 0px 0px 10px white,
+               0px 0px 40px white;
 }
 
 /*LANTERNS*/
