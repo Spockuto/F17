@@ -30,6 +30,7 @@
 </head>
 
 <body>
+  <img id="mountains" src="images/Mountains.jpg" alt="mountains">
   <div id="opening-screen-container" class="state-container">
     <div id="castle-container">
       <div id="castle-lanterns-container">
@@ -49,16 +50,21 @@
 
       <img id="castle" class="castle" src="images/Monastery.svg" alt="castle">
       <img id="castle-m" class="castle" src="images/Monasterymobile.svg" alt="castle">
-      <img id="mountains" src="images/Mountains.svg" alt="mountains">
       <div id="castle-door-container">
-        <div id="castle-door-left" class="door left-door castle-door">
-          <div id="castle-doorknob-left" class="castle-doorknob"></div>
+        <div id="door-left" class="door-div">
+          <img id="castle-door-left" class="door left-door castle-door" src="images/Door-Left.svg" alt="door">
+          <div class="door-overlay"></div>
         </div><!--
-     --><div id="castle-door-right" class="door right-door castle-door">
-          <div id="castle-doorknob-right" class="castle-doorknob"></div>
+     --><div id="door-right" class="door-div">
+          <img id="castle-door-right" class="door right-door castle-door" src="images/Door-Right.svg" alt="door">
+          <div class="door-overlay"></div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="alert">
+    Click The Screen
   </div>
 
   <div id="headline" style="display:none; opacity:0">

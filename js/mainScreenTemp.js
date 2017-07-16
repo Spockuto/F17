@@ -7,15 +7,11 @@ window.addEventListener('click', () => {
 });
 
 function openDoors() {
-	doors = document.querySelectorAll('.castle-door');
+	overlays = document.querySelectorAll('.door-overlay');
 	leftDoor = document.querySelector('#castle-door-left');
 	rightDoor = document.querySelector('#castle-door-right');
-	doorknobs = document.querySelectorAll('.castle-doorknob');
-	for (var door of doors) {
-		door.style.backgroundColor = "#a50101";
-	}
-	for (var doorknob of doorknobs) {
-		doorknob.style.backgroundColor = "#aaa";
+	for (var overlay of overlays) {
+		overlay.style.opacity = 0.5;
 	}
 	leftDoor.style.transform = "rotateY(70deg)";
 	rightDoor.style.transform = "rotateY(-70deg)";
@@ -38,9 +34,13 @@ function exit() {
 	originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight;
 
 	container = document.querySelector('div#opening-screen-container');
+	mountains = document.querySelector('#mountains');
+	alert = document.querySelector('div#alert');
 	container.style.transform = `translateZ(${translateZ}em)`;
+	mountains.style.transform = `translateZ(10em) translateX(-50%)`;
 	document.body.style.perspectiveOrigin = `50% ${originY}%`;
-	container.style.opacity = 0;
+	document.body.style.opacity = 0;
+	alert.style.opacity = 0;
 	setTimeout(function() {
 		document.querySelector('#opening-screen-container').style.display = 'none';
 		document.querySelector('#headline').style.display = '';
