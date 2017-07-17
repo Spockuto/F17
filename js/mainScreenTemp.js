@@ -1,6 +1,11 @@
 // Basic version of the opening screen
 // Doorknob still looks weird though
 
+window.onload = function() { setTimeout( function() {
+		$('.loader').fadeOut();
+	}, 1000 );
+}
+
 window.addEventListener('click', () => {
 	openDoors();
 	setTimeout(exit, 500);
@@ -42,6 +47,7 @@ function exit() {
 	document.body.style.opacity = 0;
 	alert.style.opacity = 0;
 	setTimeout(function() {
+		document.body.style.opacity = 1;
 		document.querySelector('#opening-screen-container').style.display = 'none';
 		document.querySelector('#headline').style.display = '';
 		$('#headline').animate({

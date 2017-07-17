@@ -2,34 +2,41 @@
 <html>
 
 <head>
-    <title>Festember 2017</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Festember 2017">
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="twitter:card" content="Festember 2017">
-    <meta name="twitter:site" content="Input Output">
-    <meta name="twitter:creator" content="Input Output">
-    <meta name="twitter:title" content="Festember 2017">
-    <meta name="twitter:description" content="Festember 2017">
-    <meta property="og:title" content="Festember 2017" />
-    <meta property="og:type" content="page" />
-    <meta property="og:url" content="/" />
-    <meta property="og:description" content="Festember 2017" />
-    <meta property="og:site_name" content="Festember 2017: The annual cultural extravaganza of NIT, Trichy" />
+  <title>Festember 2017</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Festember 2017">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="twitter:card" content="Festember 2017">
+  <meta name="twitter:site" content="Input Output">
+  <meta name="twitter:creator" content="Input Output">
+  <meta name="twitter:title" content="Festember 2017">
+  <meta name="twitter:description" content="Festember 2017">
+  <meta property="og:title" content="Festember 2017" />
+  <meta property="og:type" content="page" />
+  <meta property="og:url" content="/" />
+  <meta property="og:description" content="Festember 2017" />
+  <meta property="og:site_name" content="Festember 2017: The annual cultural extravaganza of NIT, Trichy" />
   <link rel="stylesheet" type="text/css" href="css/main-page.css">
 
   <link rel="stylesheet" type="text/css" href="css/opening-screen.css">
-    <script>
-        var pageslug = 'home';
-        var jobspage = 'careers';
-    </script>
+  <link rel="stylesheet" type="text/css" href="css/preloader.css">
+  <script>
+      var pageslug = 'home';
+      var jobspage = 'careers';
+  </script>
 
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="js/app/jquery-1.11.2.min.js"></script>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> -->
+  <script type="text/javascript" src="js/app/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
+  <div class="loader">
+    <img class="shuriken" style="width:55vh;height: 55vh;" src="images/Shuriken.svg">
+      <img style="position: fixed;width: 5vh;height:5vh;" src="images/f.svg">
+  </div>
+
   <img id="mountains" src="images/Mountains.jpg" alt="mountains">
   <div id="opening-screen-container" class="state-container">
     <div id="castle-container">
@@ -61,10 +68,9 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div id="alert">
-    Click The Screen
+    <div id="alert">
+      Click to Enter the Dojo
+    </div>
   </div>
 
   <div id="headline" style="display:none; opacity:0">
@@ -74,13 +80,13 @@
     </div>
   </div>
 
-    <div id="io_intro" class="ready waiting">
-    </div>
-    <script type="text/javascript" src="js/mainScreenTemp.js"></script>
-    <script type="text/javascript" src="js/fluid/GPUFluid-1.3.js"></script>
-    <script type="text/javascript" src="js/intro/home.0.399.94.js"></script>
-    <script type="text/javascript" src="js/app/base.0.39.js"></script>
-    <script type="text/javascript" src="js/iohk/website.0.6.8191.js"></script>
+  <div id="io_intro" class="ready waiting"></div>
 </body>
+
+<script type="text/javascript" src="js/mainScreenTemp.js"></script>
+<script type="text/javascript" src="js/fluid/GPUFluid-1.3.js"></script>
+<script type="text/javascript" src="js/intro/home.0.399.94.js"></script>
+<script type="text/javascript" src="js/app/base.0.39.js"></script>
+<script type="text/javascript" src="js/iohk/website.0.6.8191.js"></script>
 
 </html>
