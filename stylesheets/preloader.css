@@ -1,0 +1,44 @@
+div#loader {
+  position: absolute;
+  background: black;
+  z-index: 1100;
+  transition: opacity 1s;
+}
+
+div#shift {
+  position: absolute;
+  width: 55vh;
+  height: 55vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img#shuriken{
+  position: fixed;
+  width: 55vh;
+  height: 55vh;
+  -webkit-animation: spin 3s linear infinite;
+     -moz-animation: spin 3s linear infinite;
+       -o-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+img#f {
+  position: absolute;
+  width: 5vh;
+  height:5vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}

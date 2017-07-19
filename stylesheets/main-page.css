@@ -1,3 +1,9 @@
+@font-face {
+  font-family: GangOfThree;
+  src: url('../fonts/gangofthree.ttf');
+  font-weight: bold;
+}
+
 * {
   user-select: none;
   -webkit-user-drag: none;
@@ -14,83 +20,41 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: black;
+
+  transition: opacity 2s;
   perspective: 20em;
   transform-style: preserve-3d;
 }
 
-div.state-container {
+.state-container {
   width: inherit;
   height: inherit;
-  transition: transform 2s, opacity 2s;
-}
-
-div#castle-container {
-  width: inherit;
-  position: absolute;
-  bottom: 0px;
+  transition: opacity 2s;
 }
 
 /*Background*/
-div.background img {
+/*div.background img {
   position: absolute;
+  transition: transform 2s;
   width: 200%;
   height: 100%;
-  animation: slide 40s linear infinite; /* Time is subject to change based on image */
+  animation: slide 40s linear infinite;
   z-index: -100;
-}
+}*/
 
-@keyframes slide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
 
 /* The Background image is twice the length of the screen.
  * When one length finishes it resets to make the transition seamless.
  * Width and Height properties should be modified through MQs as the screen size changes.
  */
 
-img.building {
-  position: relative;
-  /*bottom: 0px;*/
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -10;
-}
-
-div.door {
-  transition: all 2s, transform 1.5s, background-color 1.3s;
-}
-
-div.left-door {
-  transform-origin: left;
-}
-
-div.right-door {
-  transform-origin: right;
-}
-
-img.lantern {
+/*Castle*/
+/*div#castle-container {
+  width: inherit;
   position: absolute;
-  z-index: 10;
-  width: 60px;
-  animation: oscillate ease-in-out infinite alternate forwards;
-  transform-origin: top;
-}
+  bottom: 0px;
+  transition: transform 2s;
+  perspective: 20em;
+  transform-style: preserve-3d;
+}*/
 
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10%); }
-}
-
-@keyframes oscillate {
-  from { transform: rotate(-5deg); }
-  to   { transform: rotate(5deg); }
-}
-
-img.lantern-left {
-  transform: translateX(-50%);
-}
-
-img.lantern-right {
-  transform: translateX(50%);
-}

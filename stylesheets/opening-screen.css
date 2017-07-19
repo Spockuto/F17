@@ -1,65 +1,71 @@
-div#castle-container {
-  margin-bottom: -4px;
+#opening-screen-container {
+  z-index: 1000;
 }
 
-/*DOOR*/
-div#castle-door-container {
+/*BACKGROUND*/
+img#mountains {
   position: absolute;
-  bottom: 218px;
-  left: 50%;
-  height: 111px;
-  transform: translateX(-50%);
-  perspective: 18.75em;
+  left:  50%;
+  /*top: 50%;*/
+  bottom: 0;
+  transform: translateX(-50%)/* translateY(-50%)*/;
+  width: 100vw;
+  height: initial;
+  z-index: -2000;
+  transition: transform 2s;
 }
 
-div.castle-door {
-  background-color: #e80000;
-  border: 1px solid #7e1a00;
-  width: 42px;
-  height: inherit;
-  display: inline-block;
-}
-
-/*DOORKNOB*/
-div.castle-doorknob {
-  position: relative;
-  top: 60%;
-  background-color: #eee;
-  border: 1px solid #7e1a00;
-  border-radius: 11px;
-  width: 11px;
-  height: 11px;
-  transition: background-color 1.3s;
-}
-
-div#castle-doorknob-left {
-  left: 73%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-div#castle-doorknob-right {
-  left: 27%;
-  transform: translateX(-50%) translateY(-50%);
+#castle-container {
+  position: absolute;
+  bottom: -4.8%;
+  width: inherit;
+  transition: transform 2s;
 }
 
 /*LANTERNS*/
+img.lantern {
+  position: absolute;
+  z-index: 10;
+  transform-origin: top;
+  transition: top 4s;
+  animation: float ease-in-out infinite alternate forwards;
+}
+
+/*@keyframes float {
+  from { margin-top: 0; }
+  to { margin-top: 10px; }
+}*/
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5%); }
+}
+
+@keyframes oscillate {
+  from { transform: rotate(-5deg); }
+  to   { transform: rotate(5deg); }
+}
+
 img.lantern-top {
-  width: 40px;
-  top: 10%;
+  width: 1.33vw;
+  z-index: -100;
 }
 
 img.lantern-behind {
   top: 17%;
+  width: 2.133vw;
+  z-index: -20;
 }
 
 img.lantern-front {
-  width: 80px;
   top: 35%;
+  width: 3.8vw;
+  z-index: 20;
 }
 
 img.lantern-side {
-  width: 70px;
   top: 50%;
+  width: 2.7vw;
+  z-index: -40;
 }
 
 img#lantern1 {
@@ -73,37 +79,191 @@ img#lantern2 {
 }
 
 img#lantern3 {
-  left: 28%;
+  left: 31%;
   animation-duration: 1.2s;
 }
 
 img#lantern4 {
-  right: 28%;
+  right: 31%;
   animation-duration: 1.3s;
 }
 
 img#lantern5 {
-  left: 35%;
+  left: 38%;
   animation-duration: 1.4s;
 }
 
 img#lantern6 {
-  right: 35%;
+  right: 38%;
   animation-duration: 1.5s;
 }
 
 img#lantern7 {
-  left: 13%;
+  left: 18%;
   animation-duration: 1.6s;
 }
 
 img#lantern8 {
-  right: 13%;
+  right: 18%;
   animation-duration: 1.7s;
 }
 
-/*img#lantern9 {
+/*TREES*/
+#trees-container {
   position: absolute;
-  width: 60px;
-  display: none;
-}*/
+  left: 50%;
+  bottom: 20vh;
+  width: inherit;
+}
+
+img.tree {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: opacity 1s;
+  z-index: -30;
+}
+
+img#tree1 {
+  left: -25%;
+  height: 58vh;
+}
+
+img#tree2 {
+  left: -13%;
+  height: 53vh;
+}
+
+img#tree3 {
+  left: 17%;
+  height: 55vh;
+}
+
+img#tree4 {
+  left: 27%;
+  bottom: 5vh;
+  height: 40vh;
+}
+
+img#tree5 {
+  left: 37%;
+  bottom: -5vh;
+  height: 65vh;
+}
+
+img#tree6 {
+  left: -37%;
+  bottom: -5vh;
+  height: 65vh;
+}
+
+/*CASTLES*/
+img.monastery {
+  position: relative;
+  bottom: 0;
+  height: 80vh;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 1s;
+  z-index: 0;
+}
+
+img#castle {
+  margin-bottom: -3.61px;
+}
+
+img#castle-mobile {
+  position: absolute;
+  opacity: 0;
+}
+
+/*DOOR*/
+div#castle-door-container {
+  position: absolute;
+  left: 50%;
+  bottom: 29.25vh;
+  height: 14.5vh;
+  transform: translateX(-50%);
+  perspective: 18.75em;
+}
+
+div.door {
+  display: inline-block;
+  position: relative;
+  height: 14.5vh;
+  transition: transform 1.5s;
+}
+
+img.door-img {
+  height: inherit;
+  margin: 0 -1px;
+}
+
+div#door-left {
+  transform-origin: left;
+}
+
+div#door-right {
+  transform-origin: right;
+}
+
+div.door-overlay {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1.2s, transform 1.5s;
+  z-index: 100;
+}
+
+
+div#alert {
+  position: absolute;
+  bottom: 7.8%;
+  z-index: 1000;
+  width: inherit;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0px 0px 10px black, 0px 0px 40px black;
+  animation: bounce 0.5s ease-out infinite alternate;
+  transition: opacity 1s;
+  font-family: GangOfThree;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15%); }
+}
+
+/*MEDIA QUERIES*/
+@media screen and (orientation: portrait) {
+  img#castle-mobile {
+    opacity: 1;
+  }
+  img#castle {
+    opacity: 0;
+  }
+  img.lantern {
+    top: -100%;
+  }
+  img#tree2, img#tree3 {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1920/1079) {
+  img#mountains {
+    width: initial;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1366/440) {
+  img.lantern {
+    top: -150%;
+  }
+}
