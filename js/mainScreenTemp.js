@@ -2,7 +2,7 @@
 // Doorknob still looks weird though
 
 window.onload = function() { setTimeout( function() {
-		$('.loader').fadeOut();
+		$('#loader').fadeOut();
 	}, 1000 );
 }
 
@@ -47,6 +47,14 @@ function exit() {
 	document.body.style.opacity = 0;
 	alert.style.opacity = 0;
 	mountains.style.opacity = 0;
+
+	// Chrome for Android bug workaround
+	// if (/.*Android.*Chrome.*/i.test(navigator.userAgent))
+	// 	var waitTime = 7000;
+	// else
+	// 	var waitTime = 2000;
+	var waitTime = 2000;
+
 	setTimeout(function() {
 		document.body.style.opacity = 1;
 		document.querySelector('#opening-screen-container').style.display = 'none';
@@ -54,7 +62,7 @@ function exit() {
 		$('#headline').animate({
 			'opacity': 1,
 		},1000);
-	},1300);
+	}, waitTime);
 }
 
 function reset() {

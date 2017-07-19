@@ -1,4 +1,4 @@
-body {
+/*body {
 	margin: 0;
 	padding: 0;
 	font-family: Helvetica, Arial, sans-serif;
@@ -11,36 +11,55 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
 	background: black;
 	z-index: 1100;
+}*/
+
+
+
+div#loader {
+  position: absolute;
+  background: black;
+  z-index: 1100;
+  transition: opacity 1s;
+  width: 100vw;
+  height: 100vh;
 }
 
-.content {
-	width: 100vw;
-	height: 100vh;
-	background: white;
+div#shift {
+  position: absolute;
+  width: 55vh;
+  height: 55vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.shuriken{
-	position: fixed;
-	-webkit-animation: spin 3s linear infinite;
-	-moz-animation: spin 3s linear infinite;
-	-o-animation: spin 3s linear infinite;
-	animation: spin 3s linear infinite;
+img#shuriken{
+  position: fixed;
+  width: 55vh;
+  height: 55vh;
+  -webkit-animation: spin 3s linear infinite;
+     -moz-animation: spin 3s linear infinite;
+       -o-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+img#f {
+  position: absolute;
+  width: 5vh;
+  height:5vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @-webkit-keyframes spin {
-    0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);}   
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
 }
