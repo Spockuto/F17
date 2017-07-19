@@ -41,11 +41,12 @@ function exit() {
 	container = document.querySelector('div#opening-screen-container');
 	mountains = document.querySelector('#mountains');
 	alert = document.querySelector('div#alert');
+	document.body.style.perspectiveOrigin = `50% ${originY}%`;
 	container.style.transform = `translateZ(${translateZ}em)`;
 	mountains.style.transform = `translateZ(10em) translateX(-50%)`;
-	document.body.style.perspectiveOrigin = `50% ${originY}%`;
 	document.body.style.opacity = 0;
 	alert.style.opacity = 0;
+	mountains.style.opacity = 0;
 	setTimeout(function() {
 		document.body.style.opacity = 1;
 		document.querySelector('#opening-screen-container').style.display = 'none';

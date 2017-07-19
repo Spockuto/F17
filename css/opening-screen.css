@@ -57,6 +57,50 @@ div.background img {
  * Width and Height properties should be modified through MQs as the screen size changes.
  */
 
+div#castle-trees-container {
+  width: inherit;
+  position: absolute;
+  left: 50%;
+  bottom: 20vh;
+}
+
+#castle-trees-container img {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  z-index: -30;
+  transform: translateX(-50%);
+  transition: opacity 1s;
+}
+
+#tree1 {
+  left: -25%;
+  height: 58vh;
+}
+#tree2 {
+  left: -13%;
+  height: 53vh;
+}
+#tree3 {
+  left: 17%;
+  height: 55vh;
+}
+#tree4 {
+  left: 27%;
+  height: 40vh;
+  bottom: 5vh !important;
+}
+#tree5 {
+  left: 37%;
+  height: 65vh;
+  bottom: -5vh !important;
+}
+#tree6 {
+  left: -37%;
+  height: 65vh;
+  bottom: -5vh !important;
+}
+
 #castle {
 }
 
@@ -86,6 +130,9 @@ div.background img {
   img.lantern {
     top: -75% !important;
     width: 100px;
+  }
+  #tree2, #tree3 {
+    opacity: 0;
   }
 }
 
@@ -270,21 +317,25 @@ div#headline-container {
 /*LANTERNS*/
 img.lantern-top {
   width: 1.33vw;
-  top: 10%;
+  z-index: -100;
 }
 
 img.lantern-behind {
+  width: 2.133vw;
   top: 17%;
+  z-index: -20;
 }
 
 img.lantern-front {
   width: 3.8vw;
   top: 35%;
+  z-index: 20;
 }
 
 img.lantern-side {
-  width: 2.133vw;
+  width: 2.7vw;
   top: 50%;
+  z-index: -40;
 }
 
 img#lantern1 {
@@ -298,37 +349,31 @@ img#lantern2 {
 }
 
 img#lantern3 {
-  left: 28%;
+  left: 31%;
   animation-duration: 1.2s;
 }
 
 img#lantern4 {
-  right: 28%;
+  right: 31%;
   animation-duration: 1.3s;
 }
 
 img#lantern5 {
-  left: 35%;
+  left: 38%;
   animation-duration: 1.4s;
 }
 
 img#lantern6 {
-  right: 35%;
+  right: 38%;
   animation-duration: 1.5s;
 }
 
 img#lantern7 {
-  left: 13%;
+  left: 18%;
   animation-duration: 1.6s;
 }
 
 img#lantern8 {
-  right: 13%;
+  right: 18%;
   animation-duration: 1.7s;
 }
-
-/*img#lantern9 {
-  position: absolute;
-  width: 60px;
-  display: none;
-}*/
