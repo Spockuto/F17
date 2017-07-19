@@ -1,13 +1,12 @@
 window.onload = function () { 
 	setTimeout(function() {
-		fadeOut(document.querySelector("#loader"), 1000);
+		loaderFadeOut(document.querySelector("#loader"), 1000);
 	}, 1000); 
 }
 
-function fadeOut(element, time) {
-	document.body.style.opacity = 0;
-	setTimeout(function() { 
-		element.style.display = "none";
-		document.body.style.opacity = 1;
+function loaderFadeOut(element, time) {
+	element.style.opacity = 0;
+	setTimeout(function() {
+		element.style.zIndex = -50;
 	}, time);
 }

@@ -22,39 +22,14 @@ body {
   background-color: black;
 
   transition: opacity 2s;
-  perspective: 20em;
-  transform-style: preserve-3d;
+/*  perspective: 20em;
+  transform-style: preserve-3d;*/
 }
 
 .state-container {
   width: inherit;
   height: inherit;
   transition: opacity 2s;
-}
-
-/*Background*/
-/*div.background img {
-  position: absolute;
-  transition: transform 2s;
-  width: 200%;
-  height: 100%;
-  animation: slide 40s linear infinite;
-  z-index: -100;
-}*/
-
-
-/* The Background image is twice the length of the screen.
- * When one length finishes it resets to make the transition seamless.
- * Width and Height properties should be modified through MQs as the screen size changes.
- */
-
-/*Castle*/
-/*div#castle-container {
-  width: inherit;
-  position: absolute;
-  bottom: 0px;
-  transition: transform 2s;
   perspective: 20em;
   transform-style: preserve-3d;
-}*/
-
+}
