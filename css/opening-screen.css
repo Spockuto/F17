@@ -314,6 +314,10 @@ div#headline-container {
   text-shadow: 0px 0px 10px white, 0px 0px 40px white;
 }
 
+div#headline-container h1, div#headline-container h3 {
+ font-family: GangOfThree;
+}
+
 /*LANTERNS*/
 img.lantern-top {
   width: 1.33vw;
