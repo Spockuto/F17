@@ -2,6 +2,20 @@ div#menu-container {
   position: absolute;
   top: 0;
   z-index: -100;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+div#icon-wrapper {
+  position: relative;
+  top: 60vh;
+  width: 100vw;
+  left: 50%;
+}
+
+img.icon-svgs {
+  position: relative;
+  transform: translateX(-50%);
 }
 
 img#dojo {
@@ -11,6 +25,14 @@ img#dojo {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 2s;
+}
+
+img#traindummy {
+  width: 8em;
+  left: -24%;
+}
+
+img#hospitality {
+  width: 15em;
+  left: 13%;
 }

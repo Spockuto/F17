@@ -67,5 +67,6 @@ function castleFadeOut(element, loader, time) {
 		document.removeEventListener('click', enter);
 
 		// Dojo Fade in
+		document.getElementById('menu-container').style.opacity = 1;
 	}, time);
 }
