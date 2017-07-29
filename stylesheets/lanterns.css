@@ -1,0 +1,62 @@
+img.lantern-top {
+  width: 1.33vw;
+  z-index: -100;
+}
+
+img.lantern-behind {
+  top: 17%;
+  width: 2.133vw;
+  z-index: -20;
+}
+
+img.lantern-front {
+  top: 35%;
+  width: 3.8vw;
+  z-index: 20;
+}
+
+img.lantern-side {
+  top: 50%;
+  width: 2.7vw;
+  z-index: -40;
+}
+
+img#lantern1 {
+  left: 25%;
+  animation-duration: 1s;
+}
+
+img#lantern2 {
+  right: 25%;
+  animation-duration: 1.1s;
+}
+
+img#lantern3 {
+  left: 31%;
+  animation-duration: 1.2s;
+}
+
+img#lantern4 {
+  right: 31%;
+  animation-duration: 1.3s;
+}
+
+img#lantern5 {
+  left: 38%;
+  animation-duration: 1.4s;
+}
+
+img#lantern6 {
+  right: 38%;
+  animation-duration: 1.5s;
+}
+
+img#lantern7 {
+  left: 18%;
+  animation-duration: 1.6s;
+}
+
+img#lantern8 {
+  right: 18%;
+  animation-duration: 1.7s;
+}

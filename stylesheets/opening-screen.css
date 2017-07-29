@@ -44,68 +44,8 @@ img.lantern {
   to   { transform: rotate(5deg); }
 }
 
-img.lantern-top {
-  width: 1.33vw;
-  z-index: -100;
-}
+/*Check lanterns.css for lantern specific styles*/
 
-img.lantern-behind {
-  top: 17%;
-  width: 2.133vw;
-  z-index: -20;
-}
-
-img.lantern-front {
-  top: 35%;
-  width: 3.8vw;
-  z-index: 20;
-}
-
-img.lantern-side {
-  top: 50%;
-  width: 2.7vw;
-  z-index: -40;
-}
-
-img#lantern1 {
-  left: 25%;
-  animation-duration: 1s;
-}
-
-img#lantern2 {
-  right: 25%;
-  animation-duration: 1.1s;
-}
-
-img#lantern3 {
-  left: 31%;
-  animation-duration: 1.2s;
-}
-
-img#lantern4 {
-  right: 31%;
-  animation-duration: 1.3s;
-}
-
-img#lantern5 {
-  left: 38%;
-  animation-duration: 1.4s;
-}
-
-img#lantern6 {
-  right: 38%;
-  animation-duration: 1.5s;
-}
-
-img#lantern7 {
-  left: 18%;
-  animation-duration: 1.6s;
-}
-
-img#lantern8 {
-  right: 18%;
-  animation-duration: 1.7s;
-}
 
 /*TREES*/
 #trees-container {
@@ -124,38 +64,8 @@ img.tree {
   z-index: -30;
 }
 
-img#tree1 {
-  left: -25%;
-  height: 58vh;
-}
+/*Check trees.css for tree specific styles*/
 
-img#tree2 {
-  left: -13%;
-  height: 53vh;
-}
-
-img#tree3 {
-  left: 17%;
-  height: 55vh;
-}
-
-img#tree4 {
-  left: 27%;
-  bottom: 5vh;
-  height: 40vh;
-}
-
-img#tree5 {
-  left: 37%;
-  bottom: -5vh;
-  height: 65vh;
-}
-
-img#tree6 {
-  left: -37%;
-  bottom: -5vh;
-  height: 65vh;
-}
 
 /*CASTLES*/
 img.monastery {
@@ -236,33 +146,4 @@ div#alert {
 @keyframes bounce {
   from { transform: translateY(0); }
   to { transform: translateY(-15%); }
-}
-
-/*MEDIA QUERIES*/
-@media screen and (orientation: portrait) {
-  img#castle-mobile {
-    opacity: 1;
-  }
-  img#castle {
-    opacity: 0;
-  }
-  img.lantern {
-    top: -100%;
-  }
-  img#tree2, img#tree3 {
-    opacity: 0;
-  }
-}
-
-@media screen and (max-aspect-ratio: 1920/1079) {
-  img#mountains {
-    width: initial;
-    height: 100vh;
-  }
-}
-
-@media screen and (min-aspect-ratio: 1366/440) {
-  img.lantern {
-    top: -150%;
-  }
 }

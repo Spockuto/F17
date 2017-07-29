@@ -1,0 +1,32 @@
+img#tree1 {
+  left: -25%;
+  height: 58vh;
+}
+
+img#tree2 {
+  left: -13%;
+  height: 53vh;
+}
+
+img#tree3 {
+  left: 17%;
+  height: 55vh;
+}
+
+img#tree4 {
+  left: 27%;
+  bottom: 5vh;
+  height: 40vh;
+}
+
+img#tree5 {
+  left: 37%;
+  bottom: -5vh;
+  height: 65vh;
+}
+
+img#tree6 {
+  left: -37%;
+  bottom: -5vh;
+  height: 65vh;
+}

@@ -1,0 +1,27 @@
+@media screen and (orientation: portrait) {
+  img#castle-mobile {
+    opacity: 1;
+  }
+  img#castle {
+    opacity: 0;
+  }
+  img.lantern {
+    top: -100%;
+  }
+  img#tree2, img#tree3 {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1920/1079) {
+  img#mountains {
+    width: initial;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1366/440) {
+  img.lantern {
+    top: -150%;
+  }
+}
