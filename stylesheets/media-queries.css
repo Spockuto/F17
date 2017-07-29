@@ -20,6 +20,13 @@
   }
 }
 
+@media screen and (max-aspect-ratio: 997/561) {
+  img#dojo {
+    width: initial;
+    height: 100vh;
+  }
+}
+
 @media screen and (min-aspect-ratio: 1366/440) {
   img.lantern {
     top: -150%;

@@ -22,11 +22,12 @@ body {
   background-color: black;
 
   transition: opacity 2s;
-/*  perspective: 20em;
+  /*perspective: 20em;
   transform-style: preserve-3d;*/
 }
 
 .state-container {
+  position: absolute;
   width: inherit;
   height: inherit;
   transition: opacity 2s;

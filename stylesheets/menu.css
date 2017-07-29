@@ -1,0 +1,16 @@
+div#menu-container {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+img#dojo {
+  width: 100vw;
+  height: initial;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 2s;
+}

@@ -1,5 +1,4 @@
 div#loader {
-  position: absolute;
   background: black;
   z-index: 1100;
   transition: opacity 1s;
