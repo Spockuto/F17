@@ -1,38 +1,58 @@
-div#menu-container {
+#menu-container {
+  top: 0;
+  transform: translateZ(-9em);
+  z-index: -100;
+  perspective: 20em;
+  transform-style: preserve-3d;
+}
+
+#menu-overlay {
   position: absolute;
   top: 0;
-  z-index: -100;
-  opacity: 0;
-  transition: opacity 2s;
-}
-
-div#icon-wrapper {
-  position: relative;
-  top: 60vh;
-  width: 100vw;
-  left: 50%;
-}
-
-img.icon-svgs {
-  position: relative;
-  transform: translateX(-50%);
+  width: inherit;
+  height: inherit;
+  background-color: black;
+  transform: translateZ(9em);
+  transition: opacity 1s;
 }
 
 img#dojo {
-  width: 100vw;
+  width: 181.81vw;
   height: initial;
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#front-dojo-container {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  transform: translateZ(2.5em);
+  transition: opacity 2s, transform 2s; /*TEMP*/
+/*  perspective: 20em;
+  transform-style: preserve-3d;*/
+}
+
+img.front-svgs {
+  position: absolute;
+  bottom: 0;
   transform: translateX(-50%);
+  transition: transform 0.3s;
+}
+
+img.front-svgs:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
 img#traindummy {
-  width: 8em;
-  left: -24%;
+  height: 16.363em;
+  left: -25em;
 }
 
-img#hospitality {
-  width: 15em;
-  left: 13%;
+img#table {
+  height: 10.91em;
+  left: 25em;
 }

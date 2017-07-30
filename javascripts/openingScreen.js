@@ -1,9 +1,13 @@
-document.addEventListener('click', enter);
+var loader = document.querySelector("#loader");
+var openingContainer = document.querySelector('div#opening-screen-container');
+loader.addEventListener('click', next);
+openingContainer.addEventListener('click', next);
 
-function enter() {
+function next() {
 	openDoors();
-	setTimeout(exit, 500);
+	setTimeout(enter, 500);
 }
+
 
 function openDoors() {
 	var overlays = document.querySelectorAll('.door-overlay');
@@ -17,7 +21,7 @@ function openDoors() {
 	rightDoor.style.transform = "rotateY(-70deg)";
 }
 
-function exit() {
+function enter() {
 	var translateZ = 20;
 	var perspective = 20;
 	var originY = originYCalc(translateZ, perspective);
@@ -35,7 +39,7 @@ function exit() {
 	var loader = document.querySelector("#loader");
 	var mountains = document.querySelector('#mountains');
 
-	mainContainer.style.perspectiveOrigin = `50% ${originY}%`;
+	openingContainer.style.perspectiveOrigin = `50% ${originY}%`;
 	castleContainer.style.transform = `translateZ(${translateZ}em)`;
 	mountains.style.transform = `translateX(-50%) translateZ(10em)`;
 	castleFadeOut(mainContainer, loader, waitTime);
@@ -52,7 +56,7 @@ function originYCalc(translateZ, perspective) {
 	// dist = Dist between originY pt and center of door
 	var dist = ( (doorCenter - 1)*castleHeight + screenHeight/2 ) / (zoomFactor - 1);
 
-	// height of pt from the top (+1 is a correction to account for translation)
+	// height of pt from the top (+2 is a correction to account for translation)
 	var originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight  +  2;
 	return originY;
 }
@@ -64,9 +68,10 @@ function castleFadeOut(element, loader, time) {
 		element.style.display = "none";
 		loader.style.opacity = 0;
 		setTimeout(function() { loader.style.display = "none"; }, 1000);
-		document.removeEventListener('click', enter);
 
 		// Dojo Fade in
-		document.getElementById('menu-container').style.opacity = 1;
+		overlay = document.querySelector('#menu-overlay')
+		overlay.style.opacity = 0;
+		setTimeout(function() { overlay.style.display = "none"; }, 1000);
 	}, time);
 }

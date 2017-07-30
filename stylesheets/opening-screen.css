@@ -88,7 +88,7 @@ img#castle-mobile {
 }
 
 /*DOOR*/
-div#castle-door-container {
+#castle-door-container {
   position: absolute;
   left: 50%;
   bottom: 29.25vh;
@@ -117,7 +117,7 @@ div#door-right {
   transform-origin: right;
 }
 
-div.door-overlay {
+.door-overlay {
   position: absolute;
   top: 0%;
   width: 100%;

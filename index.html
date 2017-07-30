@@ -34,7 +34,7 @@
   <script type="text/javascript" src="javascripts/loader.js"></script>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
   <div class="state-container" id="loader">
     <div id="shift"> 
       <img id="shuriken" src="images/Shuriken.svg">
@@ -88,13 +88,15 @@
   </div>
 
   <div class="state-container" id="menu-container">
+    <div id="menu-overlay"></div>
     <img id="dojo" src="images/Dojo.svg" alt="Dojo">
-    <div id="icon-wrapper">
-      <img class="icon-svgs" id="traindummy" src="images/Traindummy.svg" alt="Dojo">
-      <img class="icon-svgs" id="hospitality" src="images/Hospitality.svg" alt="Dojo">
+    <div id="front-dojo-container">
+      <img class="front-svgs" id="traindummy" src="images/Traindummy.svg" alt="Dojo" onclick="redirect()">
+      <img class="front-svgs" id="table" src="images/Hospitality.svg" alt="Dojo" onclick="redirect()">
     </div>
   </div>
 </body>
 
 <script type="text/javascript" src="javascripts/openingScreen.js"></script>
+<script type="text/javascript" src="javascripts/menu.js"></script>
 </html>
