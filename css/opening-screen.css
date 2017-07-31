@@ -25,253 +25,6 @@ body {
   transition: all 2s;
 }
 
-div.state-container {
-  width: inherit;
-  height: inherit;
-  transition: transform 2s, opacity 2s;
-}
-
-div#castle-container {
-  width: inherit;
-  position: absolute;
-  bottom: 0px;
-  z-index: 1000;
-}
-
-/*Background*/
-div.background img {
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  animation: slide 40s linear infinite; /* Time is subject to change based on image */
-  z-index: -100;
-}
-
-@keyframes slide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* The Background image is twice the length of the screen.
- * When one length finishes it resets to make the transition seamless.
- * Width and Height properties should be modified through MQs as the screen size changes.
- */
-
-div#castle-trees-container {
-  width: inherit;
-  position: absolute;
-  left: 50%;
-  bottom: 20vh;
-}
-
-#castle-trees-container img {
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
-  z-index: -30;
-  transform: translateX(-50%);
-  transition: opacity 1s;
-}
-
-#tree1 {
-  left: -25%;
-  height: 58vh;
-}
-#tree2 {
-  left: -13%;
-  height: 53vh;
-}
-#tree3 {
-  left: 17%;
-  height: 55vh;
-}
-#tree4 {
-  left: 27%;
-  height: 40vh;
-  bottom: 5vh !important;
-}
-#tree5 {
-  left: 37%;
-  height: 65vh;
-  bottom: -5vh !important;
-}
-#tree6 {
-  left: -37%;
-  height: 65vh;
-  bottom: -5vh !important;
-}
-
-#castle {
-}
-
-#castle-m {
-  opacity: 0;
-  position: absolute;
-}
-
-#mountains {
-  position: absolute;
-  left:  50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 100vw;
-  height: initial;
-  z-index: -2000;
-  transition: transform 2s, opacity 1.5s;
-}
-
-@media screen and (orientation: portrait) {
-  #castle-m {
-    opacity: 1;
-  }
-  #castle {
-    opacity: 0;
-  }
-  img.lantern {
-    top: -75% !important;
-    width: 100px;
-  }
-  #tree2, #tree3 {
-    opacity: 0;
-  }
-}
-
-@media screen and (max-aspect-ratio: 1920/1079) {
-  #mountains {
-    width: initial;
-    height: 100vh;
-  }
-}
-
-.castle {
-  height: 80vh;
-  bottom: 0;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 1s;
-  z-index: -10;
-}
-
-img.door {
-  transition: all 2s, transform 1.5s, background-color 1.3s;
-}
-
-img.left-door {
-  transform-origin: left;
-}
-
-img.right-door {
-  transform-origin: right;
-}
-
-img.lantern {
-  position: absolute;
-  z-index: 10;
-  /*width: 60px;*/
-  width: 3.2vw;
-  animation: float ease-in-out infinite alternate forwards;
-  transition: top 4s;
-  transform-origin: top;
-}
-
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-5%); }
-}
-
-@keyframes oscillate {
-  from { transform: rotate(-5deg); }
-  to   { transform: rotate(5deg); }
-}
-
-img.lantern-left {
-  transform: translateX(-50%);
-}
-
-img.lantern-right {
-  transform: translateX(50%);
-}
-
-
-img#castle {
-  margin-bottom: -3.61px;
-}
-
-/*DOOR*/
-div#castle-door-container {
-  position: absolute;
-  bottom: 29.25vh;
-  left: 50%;
-  height: 14.5vh;
-  transform: translateX(-50%);
-  perspective: 18.75em;
-}
-
-.door-div {
-  position: relative;
-  height: 14.5vh;
-  display: inline-block;
-}
-
-.door-overlay {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0;
-  transition: all 1.2s;
-  z-index: 100;
-}
-
-img.castle-door {
-  margin: 0 -1px;
-  height: inherit;
-  display: inline-block;
-}
-
-#alert {
-  position: absolute;
-  bottom: 3%;
-  z-index: 1000;
-  width: inherit;
-  text-align: center;
-  font-size: 2em;
-  color: white;
-  text-shadow: 0px 0px 10px black, 0px 0px 40px black;
-  animation: bounce 0.5s ease-out infinite alternate;
-  transition: all 1s;
-  font-family: GangOfThree;
-}
-
-@keyframes bounce {
-  from { transform: translateY(0); }
-  to { transform: translateY(-15%); }
-}
-
-/*DOORKNOB*/
-/*div.castle-doorknob {
-  position: relative;
-  top: 60%;
-  background-color: #eee;
-  border: 1px solid #7e1a00;
-  border-radius: 11px;
-  width: 11px;
-  height: 11px;
-  transition: background-color 1.3s;
-}
-
-div#castle-doorknob-left {
-  left: 73%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-div#castle-doorknob-right {
-  left: 27%;
-  transform: translateX(-50%) translateY(-50%);
-}*/
-
 h1 {
   font-size: 5em;
   margin-top: 0px;
@@ -314,66 +67,41 @@ div#headline-container {
   text-shadow: 0px 0px 10px white, 0px 0px 40px white;
 }
 
-/*LANTERNS*/
-img.lantern-top {
-  width: 1.33vw;
-  z-index: -100;
+body{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-family: GangOfThree;
 }
 
-img.lantern-behind {
-  width: 2.133vw;
-  top: 17%;
-  z-index: -20;
+h1{
+  font-weight: 100;
+  margin: 40px 0px 20px;
 }
 
-img.lantern-front {
-  width: 3.8vw;
-  top: 35%;
-  z-index: 20;
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0px 0px 10px white, 0px 0px 40px white;
 }
 
-img.lantern-side {
-  width: 2.7vw;
-  top: 50%;
-  z-index: -40;
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  display: inline-block;
 }
 
-img#lantern1 {
-  left: 25%;
-  animation-duration: 1s;
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  display: inline-block;
 }
 
-img#lantern2 {
-  right: 25%;
-  animation-duration: 1.1s;
-}
-
-img#lantern3 {
-  left: 31%;
-  animation-duration: 1.2s;
-}
-
-img#lantern4 {
-  right: 31%;
-  animation-duration: 1.3s;
-}
-
-img#lantern5 {
-  left: 38%;
-  animation-duration: 1.4s;
-}
-
-img#lantern6 {
-  right: 38%;
-  animation-duration: 1.5s;
-}
-
-img#lantern7 {
-  left: 18%;
-  animation-duration: 1.6s;
-}
-
-img#lantern8 {
-  right: 18%;
-  animation-duration: 1.7s;
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
 }
