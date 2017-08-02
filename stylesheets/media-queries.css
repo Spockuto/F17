@@ -49,6 +49,8 @@
 }
 
 @media screen and (max-aspect-ratio: 540/703) {
+
+  /*
   img#traindummy {
     left: 0em !important;
   }
@@ -65,5 +67,20 @@
     height: 6.8em;
     left: 0em !important;
     bottom: 32em;
+  }
+*/
+  /*Above 4 selectors are useless since we now set menu-container to display:none; for a phone's screen size*/
+
+  div#menu-container {
+    display: none;
+  }
+
+  div#menu-background-container {
+    opacity: 0;
+  }
+
+  div#mobile-menu-container {
+    display: block !important;
+    opacity: 1 !important;
   }
 }
