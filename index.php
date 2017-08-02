@@ -1,3 +1,8 @@
+<?php
+  $TEMPLATEBROWSERPATH = ".";
+  $ACTIONBARMODULE = "";
+  $ACTIONBARPAGE = "";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +18,7 @@
   <meta name="twitter:description" content="Festember 2017">
   <meta property="og:title" content="Festember 2017" />
   <meta property="og:type" content="page" />
+  <meta property="og:image" content="<?php echo $TEMPALTEBROWSERPATH;?>/images/Festember.png">
   <meta property="og:url" content="/" />
   <meta property="og:description" content="Festember 2017" />
   <meta property="og:site_name" content="Festember 2017: The annual cultural extravaganza of NIT, Trichy" />
@@ -74,7 +80,7 @@
    </nav>
 
 
-    <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains2.jpg" alt="mountains" class="background" id="opening-screen-background">
+    <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains.jpg" alt="mountains" class="background" id="opening-screen-background">
     <div id="castle-container">
       <div id="lanterns-container">
         <img class="lantern lantern-top" id="lantern1" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Lantern.svg">
@@ -135,7 +141,7 @@
   <!-- MENU -->
  <!-- MENU -->
   <div class="state-container" id="menu-background-container">
-    <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains.jpg" alt="mountains" class="background" id="menu-background">
+    <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains2.jpg" alt="mountains" class="background" id="menu-background">
   </div>
   <div class="state-container" id="menu-overlay"></div>
 

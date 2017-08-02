@@ -20,6 +20,7 @@ body {
 .cms-menuhead{
 	display : none !important;	
 }
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -38,119 +39,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
-
-
-.trapicons
-{
-  position: absolute;
-  width: 150px;
-  height: 300px;
-  background: transparent;
-  top: 50%;
-  margin-top: -185px;
-  left: 0;
-
-}
-.trapicon
-{
-    -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  
-  position: absolute;
-  width: 150px;
-  height: 40px;
-  background: #4C4D52;
-  border: 1px solid #D88444;
-  left: -110px;
-  cursor: pointer;
-}
-.trapicon span
-{
-  color: #FFF3E7;
-  font-weight: 100;
-  font-family: Cabin;
-  font-size: 15px;
-  margin-left: 15px;
-  line-height: 40px;
-}
-.cluster-item2
-{
-    background: transparent;
-    border: 3px solid #fff;
-    color: #fff;
-    background: #000;
-    width: 100px;
-    text-align: center;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 15px;
-    height: 30px;
-    line-height: 25px;
-    -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  margin: 5px;
-}
-
-.cluster-item2:hover
-{
-  border: 3px solid #fff;
-    background: #fff;
-    color: #000;
-}
-.sideabout
-{
-  margin-top: 0px;
-}
-.sideacco
-{
-  margin-top: 50px;
-}
-.sidecontact
-{
-  margin-top: 200px;
-}
-.sidegames
-{
-  margin-top: 100px;
-}
-.sidestar
-{
-  margin-top: 150px;
-}
-.sideinfo
-{
-  margin-top: 250px;
-}
-.sidesch
-{
-  margin-top: 300px;
-}
-.trapicon img
-{
-  float: right;
-  width: 20px;
-  height: 20px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-.trapicon:hover
-{
-  left: -3px;
-  background: #D88444;
- 
-}
-
-/********** LOGIN MENU ITEMS CSS ************/
-
-
-
-
-/*************END OF LOGIN MENU*************/
-
 
 .cms-info,.cms-warning,.cms-error
 {
@@ -214,183 +102,7 @@ margin-bottom: 10px;
     width: 100%;
     height: 100%;
 }
-.iconbar
-{
-    width: 100%;
-    top: 10px;
-    position: absolute;
-    height: 90px;
 
-}
-.itemlist
-{
-    -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-    position: absolute;
-    width: calc(33% - 30px);
-    top:120px;
-    height: calc(100% - 150px);
-    display: none;
-    margin-left: 30px;
-  
-    font-size: 250px;
-    text-align: center;
-    
-}
-.date
-{
-    font-family: Cabin;
-    font-size: 100%;
-    text-align: center;
-   
-    z-index: 99999;
-    color: #4C4D52;
-    position: absolute;
-    font-size: 12px;
-    
- 
-     width: 160px;
-    top:50%;
-    margin-top: 15px;
-    left: 50%;
-    margin-left: -77px;
-}
-.date p
-{
-    font-size: 12px;
-}
-
-.innerdate
-{
-    font-family: Cabin;
-    font-size: 100%;
-    text-align: center;
-   
-    z-index: 99999;
-    color: #B3B2AD;
-    position: absolute;
-    font-size: 12px;
-    
- 
- 
-    top:0;
-   
-   margin-left: 80px;
-   margin-top: -17px;
-}
-
-#clusterform {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    height: auto;
-    background: #EF6C00;
-    
-}
-.banner
-{
-
-    position: absolute;
-    width: 100%;
-    height: 100%;
-   background: #7BBDFF;
-}
-#farcloud
-{
-  z-index: 2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background:url(../img/farcloud.svg);
-  background-size: 1000px 900px;
-  background-repeat: repeat;
-  top: 0;
-  left: 0;
-}
-#nearcloud
-{
-  z-index: 2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background:url(../img/nearcloud.svg);
-  background-size: 1000px 900px;
-  background-repeat: repeat;
-  top: 0;
-  left: 0;
-}
-.grass
-{
-  z-index: 2;
-    position: absolute;
-    background:url(../img/grass.svg);
-    height: 30%;
-    background-size: 30%;
-    bottom: 0;
-    width: 100%;
-    background-repeat: repeat-x;
-    background-position: bottom;
-}
-.wrapper
-
-{
-z-index: 2;
- position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-height: 100%;
-     background: rgba(0,0,0,0.4);
-}
-.heading
-{
-    position: absolute;
-     top: 0;
-    left: 0;
-    width:100%;
-height: 100%;
-font-weight: 800;
-text-align: center;
-background: transparent;
-}
-.heading h3
-{
-    padding: 10px;
-    max-width: auto;
-    position: absolute;
-    height: 50px;
-    background: rgba(255,255,255,0.5) !important;
-    font-size: 50px;
-    line-height: 40px;
-    left: 0;
-    top:0;
-    bottom: 0;
-    right: 0;
-    margin: auto;    
-
-    letter-spacing: 10px;
-    color: #000 !important;
-     opacity: 1 !important;
-}
-
-.loading1 {
-  -webkit-animation: loading 8s infinite linear;
-  -moz-animation: loading 8s infinite linear;
-  -ms-animation: loading 8s infinite linear;
-  -o-animation: loading 8s infinite linear;
-  animation: loading 8s infinite linear;
-}
-.loading2 {
-  -webkit-animation: loading 12s infinite linear;
-  -moz-animation: loading 12s infinite linear;
-  -ms-animation: loading 12s infinite linear;
-  -o-animation: loading 12s infinite linear;
-  animation: loading 12s infinite linear;
-}
 
 
 @keyframes "loading" {
@@ -1778,40 +1490,8 @@ z-index: 999;
 {
     top: 110px !important;
 }
-.description
-{
-    
 
-    color: #000;
-    
-    z-index: 99999;
-    position: absolute;
-    font-family: Cabin;
-    width: 80%;
-    text-align: justify;
-    text-transform: none;
-    top: 100px;
-    left:10%;
-    
-}
-.description p
-{
-  font-size: 18px;
-    font-family: Cabin;
-    text-align: justify;
-}
-.description ul li
-{
-  font-size: 18px;
-    font-family: Cabin;
-    
-}
-.description ul,ol
-{
-  font-size: 18px !important;
-    font-family: Cabin;
 
-}
 ul,ol
 {
   font-size: 18px;
@@ -2383,8 +2063,7 @@ ul,ol
 }
 .login
 {
-	position: relative !important;
-	top:40px;
+	position: absolute !important;
 	left: calc(100% - 70px);
 }
 .infobar
@@ -2413,8 +2092,7 @@ ul,ol
 @media only screen and (max-width: 800px)  {
 	.login
 {
-	position: relative !important;
-	top:40px;
+	position: absolute !important;
 	left: calc(100% - 70px);
 }
     .contentgear

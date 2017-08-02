@@ -62,7 +62,7 @@ function showText(id) {
 }
 function hideText(id) {
 	text = document.querySelector("#" + id + "-text");
-	text.style.opacity = 0;
+	text.style.opacity = 1;
 }
 
 

@@ -4,7 +4,7 @@
 
 #castle-container {
   position: absolute;
-  bottom: -4.8%;
+  bottom: 0;
   width: inherit;
   transition: transform 2s;
 }
@@ -73,7 +73,7 @@ img.monastery {
 }
 
 img#castle {
-  margin-bottom: -3.61px;
+  /*margin-bottom: -3.61px;*/
 }
 
 img#castle-mobile {

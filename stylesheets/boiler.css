@@ -1,4 +1,4 @@
-.boiler, .circular-menu{
+.fbtwitter, .circular-menu{
   display : none;
 }
 
@@ -48,8 +48,8 @@
 
 .circular-menu {
   z-index : 999999;
-  width: 250px;
-  height: 250px;
+  width: 30px;
+  height: 30px;
   margin: 0 auto;
   position: relative;
 }

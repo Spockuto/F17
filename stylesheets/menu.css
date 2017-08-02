@@ -106,7 +106,7 @@ img#ninja:hover {
 }
 
 @keyframes levitate {
-  from { top: -5%; }
+  from { top: -3vh; }
   to { top: 0%; }
 }
 
@@ -139,10 +139,8 @@ div.description {
   font-family: GangOfThree;
   font-size: 2em;
   text-shadow: 0 0 10px white, 0 0 40px white;
-  opacity: 0;
   z-index: 100;
   transform: translateX(-50%);
-  transition: opacity 1s;
 }
 
 div#ninja-text {
