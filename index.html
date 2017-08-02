@@ -98,23 +98,44 @@
     <img class="dojo" id="dojo-mobile" src="images/DojoMobile.svg" alt="DojoMobile">
 
     <div class="svg-container" id="front-dojo-container">
-      <img class="menu-svgs front-svgs" id="traindummy" src="images/TrainingDummy.svg" alt="Dojo" onclick="redirect()">
-      <img class="menu-svgs front-svgs" id="table" src="images/Hospitality.svg" alt="Dojo" onclick="redirect()">
+      <div class="description" id="traindummy-text">Workshops</div>
+      <img class="menu-svgs front-svgs" id="traindummy" src="images/TrainingDummy.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="table-text">Hospitality</div>
+      <img class="menu-svgs front-svgs" id="table" src="images/Hospitality.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
     </div>
     <div class="svg-container" id="back-dojo-container">
-      <img class="menu-svgs shield" id="contacts" src="images/Contacts.svg" alt="Dojo" onclick="redirect()">
-      <img class="menu-svgs shield" id="sponsors" src="images/Sponsors.svg" alt="Dojo" onclick="redirect()">
-      <img class="menu-svgs" id="ninja" src="images/Highlights.png" alt="Dojo" onclick="redirect()">
+      <div class="description" id="contacts-text">Contacts</div>
+      <img class="menu-svgs shield" id="contacts" src="images/Contacts.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="sponsors-text">Sponsors</div>
+      <img class="menu-svgs shield" id="sponsors" src="images/Sponsors.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="ninja-text">Highlights</div>
+      <img class="menu-svgs" id="ninja" src="images/Highlights.png" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
     </div>
   </div>
 
   <div class="state-container" id="mobile-menu-container" style="z-index: 500;display:none; opacity: 0;text-align: center;">
     <img class="mobile-icon-ninja" src="images/Highlights.png">
-    <img class="mobile-icon-shields" src="images/Contacts.svg">
-    <img class="mobile-icon-shields" src="images/Sponsors.svg">
-    <img class="mobile-icon-others" src="images/TrainingDummy.svg">
-    <img class="mobile-icon-others" src="images/Hospitality.svg">
+    <div class="description-mobile" id="ninja-text-mobile">Highlights</div>
 
+    <img class="mobile-svg mobile-icon-shields" src="images/Contacts.svg">
+    <div class="description-mobile" id="contacts-text-mobile">Contacts</div>
+
+    <img class="mobile-svg mobile-icon-shields" src="images/Sponsors.svg">
+    <div class="description-mobile" id="sponsors-text-mobile">Sponsors</div>
+
+    <img class="mobile-svg mobile-icon-others" src="images/TrainingDummy.svg">
+    <div class="description-mobile" id="traindummy-text-mobile">Workshops</div>
+
+    <img class="mobile-svg mobile-icon-others" src="images/Hospitality.svg">
+    <div class="description-mobile" id="table-text-mobile">Hospitality</div>
   </div>
 </body>
 

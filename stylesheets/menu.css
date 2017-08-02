@@ -105,8 +105,12 @@ img#ninja:hover {
   transform: translateX(-50%) translateY(-10%) scale(1.05);
 }
 
-/*CSS for mobile version*/
+@keyframes levitate {
+  from { top: -3vh; }
+  to { top: 0%; }
+}
 
+/*CSS for mobile version*/
 .mobile-icon-shields {
   width: 30%;
   margin: 30px;
@@ -115,6 +119,7 @@ img#ninja:hover {
 .mobile-icon-others {
   width: 35%;
   margin: 20px;
+  margin-top: 40px;
 }
 
 .mobile-icon-ninja {
@@ -123,7 +128,60 @@ img#ninja:hover {
   width: 30%;
 }
 
-@keyframes levitate {
-  from { top: -5%; }
-  to { top: 0%; }
+.mobile-svg {
+  margin-bottom: 5px;
+}
+
+/*TEXT*/
+div.description {
+  position: absolute;
+  font-family: GangOfThree;
+  font-size: 2em;
+  text-shadow: 0 0 10px white, 0 0 40px white;
+  opacity: 0;
+  z-index: 100;
+  transform: translateX(-50%);
+  transition: opacity 1s;
+}
+
+div#ninja-text {
+  top: -10vh;
+}
+div#sponsors-text {
+  top: 15vh;
+}
+div#contacts-text {
+  top: 15vh;
+}
+div#table-text {
+  top: -5vh;
+}
+div#traindummy-text {
+  top: -5vh;
+}
+
+/*TEXT Mobile - TEMP*/
+div.description-mobile {
+  position: absolute;
+  font-family: GangOfThree;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px white, 0 0 40px white;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+
+div#ninja-text-mobile {
+  left: 50%;
+}
+div#sponsors-text-mobile {
+  left: 75%;
+}
+div#contacts-text-mobile {
+  left: 25%;
+}
+div#table-text-mobile {
+  left: 75%;
+}
+div#traindummy-text-mobile {
+  left: 25%;
 }
