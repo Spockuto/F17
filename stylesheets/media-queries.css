@@ -2,12 +2,15 @@
   img#castle-mobile {
     opacity: 1;
   }
+
   img#castle {
     opacity: 0;
   }
+
   img.lantern {
-    top: -100%;
+    top: -150%;
   }
+
   img#tree2, img#tree3 {
     opacity: 0;
   }
@@ -23,12 +26,10 @@
 @media screen and (max-aspect-ratio: 997/561) {
   img#dojo {
     width: initial;
-    height: 181.81vh;
+    height: 145vh;
   }
-}
 
-@media screen and (min-aspect-ratio: 1366/440) {
-  img.lantern {
-    top: -150%;
+  img.back-svgs {
+    height: 9em;
   }
 }

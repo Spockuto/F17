@@ -1,13 +1,8 @@
-var loader = document.querySelector("#loader");
 var openingContainer = document.querySelector('div#opening-screen-container');
-loader.addEventListener('click', next);
-openingContainer.addEventListener('click', next);
-
-function next() {
+openingContainer.addEventListener('click', function() {
 	openDoors();
 	setTimeout(enter, 500);
-}
-
+});
 
 function openDoors() {
 	var overlays = document.querySelectorAll('.door-overlay');
@@ -24,9 +19,13 @@ function openDoors() {
 }
 
 function enter() {
-	if (/.*Safari.*/i.test(navigator.userAgent) && !/.*Chrome.*/i.test(navigator.userAgent))
+	// Different value for safari
+	safariCheck = /.*Safari.*/i.test(navigator.userAgent) && !/.*Chrome.*/i.test(navigator.userAgent);
+	if (safariCheck) {
 		var translateZ = 16;
-	else var translateZ = 20;
+	} else {
+		var translateZ = 20;
+	}
 
 	var perspective = 20;
 	var originY = originYCalc(translateZ, perspective);
@@ -38,11 +37,21 @@ function enter() {
 	var loader = document.querySelector("#loader");
 	var mountains = document.querySelector('#mountains');
 
-	body.style.perspectiveOrigin = `50% ${originY}%`;
+
+	// Chrome for Android bug workaround
+	if (/.*Android.*Chrome.*/i.test(navigator.userAgent)) {
+		var waitTime = 4000;
+	} else {
+		var waitTime = 2000;
+	}
+
+	if (safariCheck) {
+		body.style.perspectiveOrigin = `50% ${originY}%`;
+	}
 	openingContainer.style.perspectiveOrigin = `50% ${originY}%`;
 	castleContainer.style.transform = `translateZ(${translateZ}em)`;
 	mountains.style.transform = `translateX(-50%) translateZ(7em)`;
-	castleFadeOut(mainContainer, loader, 2000);
+	castleFadeOut(mainContainer, loader, waitTime);
 }
 
 function originYCalc(translateZ, perspective) {

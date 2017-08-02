@@ -1,6 +1,6 @@
-window.onload = function () { 
+function loaderChange() {	
 	setTimeout(function() {
-		loaderFadeOut(document.querySelector("#loader"), 1000);
+		loaderFadeOut(document.querySelector("#loader"), 500);
 	}, 1000);
 }
 

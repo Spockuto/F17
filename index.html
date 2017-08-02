@@ -18,10 +18,10 @@
   <meta property="og:site_name" content="Festember 2017: The annual cultural extravaganza of NIT, Trichy" />
 
   <link rel="stylesheet" type="text/css" href="stylesheets/preloader.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/lanterns.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/trees.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/main-page.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/opening-screen.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/lanterns.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/trees.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/media-queries.css">
 
@@ -34,7 +34,7 @@
   <script type="text/javascript" src="javascripts/loader.js"></script>
 </head>
 
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;" onload="loaderChange(); shieldDistChange();">
   <div class="state-container" id="loader">
     <div id="shift"> 
       <img id="shuriken" src="images/Shuriken.svg">
@@ -87,13 +87,18 @@
     </div>
   </div>
 
-  <div id="menu-overlay"></div>
+  <div class="state-container" id="menu-overlay"></div>
   <div class="state-container" id="menu-container">
-    <img src="images/Mountains2.jpg" alt="mountains" id="mountains">
-    <img id="dojo" src="images/Dojo.svg" alt="Dojo">
-    <div id="front-dojo-container">
-      <img class="front-svgs" id="traindummy" src="images/Traindummy.svg" alt="Dojo" onclick="redirect()">
-      <img class="front-svgs" id="table" src="images/Hospitality.svg" alt="Dojo" onclick="redirect()">
+    <!-- <img src="images/Mountains.jpg" alt="mountains" id="mountains"> -->
+    <img id="dojo" src="images/DojoReference.svg" alt="Dojo">
+    <div class="svg-container" id="front-dojo-container">
+      <img class="menu-svgs front-svgs" id="traindummy" src="images/TrainingDummy.svg" alt="Dojo" onclick="redirect()">
+      <img class="menu-svgs front-svgs" id="table" src="images/Hospitality.svg" alt="Dojo" onclick="redirect()">
+    </div>
+    <div class="svg-container" id="back-dojo-container">
+      <img class="menu-svgs back-svgs" id="contacts" src="images/Contacts.svg" alt="Dojo" onclick="redirect()">
+      <img class="menu-svgs back-svgs" id="sponsors" src="images/Sponsors.svg" alt="Dojo" onclick="redirect()">
+      <img class="menu-svgs back-svgs" id="ninja" src="images/Highlights.png" alt="Dojo" onclick="redirect()">
     </div>
   </div>
 </body>

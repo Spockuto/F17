@@ -1,25 +1,19 @@
+/*CONTAINER styles*/
 #menu-container {
   top: 0;
   transform: translateZ(-9em);
   z-index: -100;
-  perspective: 20em;
-  transform-style: preserve-3d;
 }
 
 #menu-overlay {
-  position: absolute;
-  top: 0;
-  width: inherit;
-  height: inherit;
   background-color: black;
-  /*transform: translateZ(9em);*/
   opacity: 0;
   z-index: -75;
   transition: opacity 1s;
 }
 
 img#dojo {
-  width: 181.81vw;
+  width: 145vw;
   height: initial;
   position: absolute;
   top: 50%;
@@ -27,34 +21,68 @@ img#dojo {
   transform: translateX(-50%) translateY(-50%);
 }
 
-#front-dojo-container {
+.svg-container {
   position: absolute;
-  left: 50%;
   bottom: 0;
+  left: 50%;
   width: 100vw;
+  transition: opacity 2s;  
+}
+
+#front-dojo-container {
   transform: translateZ(2.5em);
-  transition: opacity 2s, transform 2s; /*TEMP*/
-/*  perspective: 20em;
-  transform-style: preserve-3d;*/
+}
+
+#back-dojo-container {
+  top: 50%;
+}
+
+
+/*SVG styles*/
+img.menu-svgs {
+  position: absolute;
+  transition: transform 0.3s;
 }
 
 img.front-svgs {
-  position: absolute;
   bottom: 0;
   transform: translateX(-50%);
-  transition: transform 0.3s;
+}
+
+img.back-svgs {
+  height: 10em;
+  transform: translateX(-50%) translateY(-37%);
 }
 
 img.front-svgs:hover {
   transform: translateX(-50%) scale(1.05);
 }
 
+img.back-svgs:hover {
+  transform: translateX(-50%) translateY(-37%) scale(1.05);
+}
+
+/*Induvidual SVGs*/
 img#traindummy {
   height: 16.363em;
-  left: -25em;
+  left: -23em;
 }
 
 img#table {
-  height: 10.91em;
-  left: 25em;
+  height: 9em;
+  left: 23em;
+}
+
+img#ninja {
+  transform: translateX(-50%) translateY(-10%);
+  animation: hover 2s ease-in-out infinite alternate;
+}
+
+img#ninja:hover {
+  transform: translateX(-50%) translateY(-10%) scale(1.05);
+}
+
+@keyframes hover {
+  from { top: -5%; }
+  to { top: 0%; }
 }
