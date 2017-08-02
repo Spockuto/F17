@@ -1,9 +1,9 @@
 var openingContainer = document.querySelector('div#opening-screen-container');
-openingContainer.addEventListener('click', function() {
+
+function holderOpenDoors(){
 	openDoors();
 	setTimeout(enter, 500);
-});
-
+}
 function openDoors() {
 	var overlays = document.querySelectorAll('.door-overlay');
 	var leftDoor = document.querySelector('#door-left');

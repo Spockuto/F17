@@ -20,12 +20,15 @@
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/preloader.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/main-page.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/opening-screen.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/material.min.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/lanterns.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/trees.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/menu.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/media-queries.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/boiler.css">
-
+  <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATEBROWSERPATH; ?>/stylesheets/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
   <script>
     var pageslug = 'home';
@@ -86,23 +89,23 @@
       </div>
 
       <div id="trees-container">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree1">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree2">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree3">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree4">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree5">
-        <img src="images/Tree.png" alt="tree" class="tree" id="tree6">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree1">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree2">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree3">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree4">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree5">
+        <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Tree.png" alt="tree" class="tree" id="tree6">
       </div>
 
       <img id="castle" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monastery.svg" alt="castle">
       <img id="castle-mobile" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monasterymobile.svg" alt="castle">
 
       <div id="castle-door-container">
-        <div class="door" id="door-left">
+        <div class="door" onclick="holderOpenDoors()" id="door-left">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Left.svg" alt="door">
           <div class="door-overlay"></div>
         </div><!--
-     --><div class="door" id="door-right">
+     --><div class="door" onclick="holderOpenDoors()" id="door-right">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Right.svg" alt="door">
           <div class="door-overlay"></div>
         </div>
@@ -130,6 +133,7 @@
   </div>
 
   <!-- MENU -->
+ <!-- MENU -->
   <div class="state-container" id="menu-background-container">
     <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains.jpg" alt="mountains" class="background" id="menu-background">
   </div>
@@ -140,14 +144,44 @@
     <img class="dojo" id="dojo-mobile" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/DojoMobile.svg" alt="DojoMobile">
 
     <div class="svg-container" id="front-dojo-container">
-      <img class="menu-svgs front-svgs" id="traindummy" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/TrainingDummy.svg" alt="Dojo" onclick="window.href="https://festember.com/17/home/events";">
-      <img class="menu-svgs front-svgs" id="table" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Hospitality.svg" alt="Dojo" onclick="window.href="https://festember.com/17/home/hospitality";">
+      <div class="description" id="traindummy-text"> Events</div>
+      <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/events';" id="traindummy" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/TrainingDummy.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="table-text">Hospitality</div>
+      <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/hospitality';"id="table" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Hospitality.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
     </div>
     <div class="svg-container" id="back-dojo-container">
-      <img class="menu-svgs shield" id="contacts" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Contacts.svg" alt="Dojo" onclick="onclick="window.href="https://festember.com/17/home/contacts";">
-      <img class="menu-svgs shield" id="sponsors" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Sponsors.svg" alt="Dojo" onclick="window.href="https://festember.com/17/home/sponsors";">
-      <img class="menu-svgs" id="ninja" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Highlights.png" alt="Dojo" onclick="window.href="https://festember.com/17/home/highlights";">
+      <div class="description" id="contacts-text">Contacts</div>
+      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/contacts';"id="contacts" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Contacts.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="sponsors-text">Sponsors</div>
+      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/sponsors';" id="sponsors" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Sponsors.svg" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+
+      <div class="description" id="ninja-text">Highlights</div>
+      <img class="menu-svgs" onclick="window.location.href='https://festember.com/17/home/highlights';" id="ninja" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Highlights.png" alt="Dojo" 
+          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
     </div>
+  </div>
+
+  <div class="state-container" id="mobile-menu-container" style="z-index: 500;display:none; opacity: 0;text-align: center;">
+    <img class="mobile-icon-ninja"onclick="window.location.href='https://festember.com/17/home/highlights';" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Highlights.png">
+    <div class="description-mobile" id="ninja-text-mobile">Highlights</div>
+
+    <img class="mobile-svg mobile-icon-shields" onclick="window.location.href='https://festember.com/17/home/contacts';" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Contacts.svg">
+    <div class="description-mobile" id="contacts-text-mobile">Contacts</div>
+
+    <img class="mobile-svg mobile-icon-shields" onclick="window.location.href='https://festember.com/17/home/sponsors';" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Sponsors.svg">
+    <div class="description-mobile" id="sponsors-text-mobile">Sponsors</div>
+
+    <img class="mobile-svg mobile-icon-others" onclick="window.location.href='https://festember.com/17/home/events';" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/TrainingDummy.svg">
+    <div class="description-mobile" id="traindummy-text-mobile">Events</div>
+
+    <img class="mobile-svg mobile-icon-others" onclick="window.location.href='https://festember.com/17/home/hospitality';" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Hospitality.svg">
+    <div class="description-mobile" id="table-text-mobile">Hospitality</div>
   </div>
 </body>
 
@@ -155,5 +189,5 @@
 <script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/javascripts/openingScreen.js"></script>
 <script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/javascripts/menu.js"></script>
 <script type="text/javascript" src="<?php echo $TEMPLATEBROWSERPATH; ?>/javascripts/boiler.js"></script>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 </html>
