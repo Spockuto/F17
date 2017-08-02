@@ -14,6 +14,7 @@
   img#tree2, img#tree3 {
     opacity: 0;
   }
+
 }
 
 @media screen and (max-aspect-ratio: 1920/1079) {
@@ -24,12 +25,40 @@
 }
 
 @media screen and (max-aspect-ratio: 997/561) {
-  img#dojo {
+  img#dojo{
     width: initial;
     height: 145vh;
   }
 
   img.back-svgs {
     height: 9em;
+  }
+}
+
+/*Front svg media queries for phone screen*/
+@media screen and (max-aspect-ratio: 718/1274) {
+  img#phonedojo {
+    width: initial;
+    height: 145vh;
+  }
+}
+
+@media screen and (max-aspect-ratio: 540/703) {
+  img#traindummy {
+    left: 0em !important;
+  }
+
+  img#phonedojo {
+    opacity: 1;
+  }
+
+  img#dojo {
+    opacity: 0;
+  }
+
+  img#table {
+    height: 6.8em;
+    left: 0em !important;
+    bottom: 32em;
   }
 }

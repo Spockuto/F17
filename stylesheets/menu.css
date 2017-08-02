@@ -12,13 +12,23 @@
   transition: opacity 1s;
 }
 
-img#dojo {
+/*Class for both dojo images (web and mobile version)*/
+img.dojos {
   width: 145vw;
   height: initial;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+img#dojo {
+  transition: opacity 1.5s;
+}
+
+img#phonedojo {
+  opacity: 0; /*initially invisible*/
+  transition: opacity 1.5s;
 }
 
 .svg-container {
@@ -66,11 +76,13 @@ img.back-svgs:hover {
 img#traindummy {
   height: 16.363em;
   left: -23em;
+  transition: all 1.5s; /*transitions occur for phone screens*/
 }
 
 img#table {
   height: 9em;
   left: 23em;
+  transition: all 1.5s; /*transitions occur for phone screens*/
 }
 
 img#ninja {
