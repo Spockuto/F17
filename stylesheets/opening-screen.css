@@ -9,6 +9,12 @@
   transition: transform 2s;
 }
 
+img#opening-screen-background {
+  bottom: 0;
+  width: 100vw;
+  transform: translateX(-50%);
+}
+
 /*LANTERNS*/
 img.lantern {
   position: absolute;

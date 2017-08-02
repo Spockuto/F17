@@ -35,7 +35,7 @@ function enter() {
 	var mainContainer = document.querySelector('div#opening-screen-container');
 	var castleContainer = document.querySelector('div#castle-container');
 	var loader = document.querySelector("#loader");
-	var mountains = document.querySelector('#mountains');
+	var mountains = document.querySelector('#opening-screen-background');
 
 
 	// Chrome for Android bug workaround

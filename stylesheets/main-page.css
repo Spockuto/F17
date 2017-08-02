@@ -37,13 +37,10 @@ body {
 
 
 /*BACKGROUND*/
-img#mountains {
+img.background {
   position: absolute;
-  left:  50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 100vw;
+  left: 50%;
   height: initial;
   z-index: -2000;
-  transition: transform 2s;
+  transition: transform 2s, opacity 1s;
 }

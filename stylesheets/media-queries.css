@@ -14,20 +14,25 @@
   img#tree2, img#tree3 {
     opacity: 0;
   }
-
 }
 
 @media screen and (max-aspect-ratio: 1920/1079) {
-  img#mountains {
+  img#opening-screen-background {
+    width: initial;
+    height: 100vh;
+  }
+
+  img#menu-background {
     width: initial;
     height: 100vh;
   }
 }
 
+
 @media screen and (max-aspect-ratio: 997/561) {
-  img#dojo{
+  img#dojo-laptop{
     width: initial;
-    height: 145vh;
+    height: 160vh;
   }
 
   img.back-svgs {
@@ -37,9 +42,9 @@
 
 /*Front svg media queries for phone screen*/
 @media screen and (max-aspect-ratio: 718/1274) {
-  img#phonedojo {
+  img#dojo-mobile {
     width: initial;
-    height: 145vh;
+    height: 160vh;
   }
 }
 
@@ -48,11 +53,11 @@
     left: 0em !important;
   }
 
-  img#phonedojo {
+  img#dojo-mobile {
     opacity: 1;
   }
 
-  img#dojo {
+  img#dojo-laptop {
     opacity: 0;
   }
 
