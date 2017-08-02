@@ -13,24 +13,23 @@ function openDoors() {
 	var overlays = document.querySelectorAll('.door-overlay');
 	var leftDoor = document.querySelector('#door-left');
 	var rightDoor = document.querySelector('#door-right');
+	var menuOverlay = document.querySelector('#menu-overlay');
 
 	for (var overlay of overlays) {
 		overlay.style.opacity = 0.3;
 	}
 	leftDoor.style.transform = "rotateY(70deg)";
 	rightDoor.style.transform = "rotateY(-70deg)";
+	menuOverlay.style.opacity = 1;
 }
 
 function enter() {
-	var translateZ = 20;
+	if (/.*Safari.*/i.test(navigator.userAgent) && !/.*Chrome.*/i.test(navigator.userAgent))
+		var translateZ = 16;
+	else var translateZ = 20;
+
 	var perspective = 20;
 	var originY = originYCalc(translateZ, perspective);
-
-	// Chrome for Android bug workaround
-	if (/.*Android.*Chrome.*/i.test(navigator.userAgent))
-		var waitTime = 4000;
-	else
-		var waitTime = 2000;
 
 	// Style Changes
 	var body = document.body;
@@ -39,10 +38,11 @@ function enter() {
 	var loader = document.querySelector("#loader");
 	var mountains = document.querySelector('#mountains');
 
+	body.style.perspectiveOrigin = `50% ${originY}%`;
 	openingContainer.style.perspectiveOrigin = `50% ${originY}%`;
 	castleContainer.style.transform = `translateZ(${translateZ}em)`;
-	mountains.style.transform = `translateX(-50%) translateZ(10em)`;
-	castleFadeOut(mainContainer, loader, waitTime);
+	mountains.style.transform = `translateX(-50%) translateZ(7em)`;
+	castleFadeOut(mainContainer, loader, 2000);
 }
 
 function originYCalc(translateZ, perspective) {
@@ -63,14 +63,9 @@ function originYCalc(translateZ, perspective) {
 
 function castleFadeOut(element, loader, time) {
 	element.style.opacity = 0;
-	setTimeout(function() { loader.style.opacity = 1; }, 2000);
 	setTimeout(function() { 
 		element.style.display = "none";
-		loader.style.opacity = 0;
-		setTimeout(function() { loader.style.display = "none"; }, 1000);
-
-		// Dojo Fade in
-		overlay = document.querySelector('#menu-overlay')
+		overlay = document.querySelector('#menu-overlay');
 		overlay.style.opacity = 0;
 		setTimeout(function() { overlay.style.display = "none"; }, 1000);
 	}, time);

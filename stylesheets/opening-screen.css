@@ -2,18 +2,6 @@
   z-index: 1000;
 }
 
-/*BACKGROUND*/
-img#mountains {
-  position: absolute;
-  left:  50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: initial;
-  z-index: -2000;
-  transition: transform 2s;
-}
-
 #castle-container {
   position: absolute;
   bottom: -4.8%;

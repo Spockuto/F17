@@ -12,7 +12,9 @@
   width: inherit;
   height: inherit;
   background-color: black;
-  transform: translateZ(9em);
+  /*transform: translateZ(9em);*/
+  opacity: 0;
+  z-index: -75;
   transition: opacity 1s;
 }
 
