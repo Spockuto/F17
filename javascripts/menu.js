@@ -1,3 +1,4 @@
+// Position Changes
 window.addEventListener('resize', menuSizeChange);
 function menuSizeChange() {
 	frontChange();
@@ -56,16 +57,19 @@ function ninjaChange() {
 	}
 }
 
+
+// Description appearance
 function showText(id) {
 	text = document.querySelector("#" + id + "-text");
 	text.style.opacity = 1;
 }
 function hideText(id) {
 	text = document.querySelector("#" + id + "-text");
-	text.style.opacity = 1;
+	text.style.opacity = 0;
 }
 
 
+// Double Layer
 // var menuContainer = document.querySelector("div#menu-container");
 // menuContainer.addEventListener('mousedown', function(event) {
 // 	if (event.button == 0) {

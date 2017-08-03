@@ -106,12 +106,12 @@
       <img id="castle" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monastery.svg" alt="castle">
       <img id="castle-mobile" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monasterymobile.svg" alt="castle">
 
-      <div id="castle-door-container">
-        <div class="door" onclick="holderOpenDoors()" id="door-left">
+      <div id="castle-door-container" onclick="holderOpenDoors()">
+        <div class="door"  id="door-left">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Left.svg" alt="door">
           <div class="door-overlay"></div>
         </div><!--
-     --><div class="door" onclick="holderOpenDoors()" id="door-right">
+     --><div class="door" id="door-right">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Right.svg" alt="door">
           <div class="door-overlay"></div>
         </div>
@@ -138,8 +138,8 @@
     </div>
   </div>
 
+
   <!-- MENU -->
- <!-- MENU -->
   <div class="state-container" id="menu-background-container">
     <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains2.jpg" alt="mountains" class="background" id="menu-background">
   </div>

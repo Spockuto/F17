@@ -1,4 +1,3 @@
-var openingContainer = document.querySelector('div#opening-screen-container');
 
 function holderOpenDoors(){
 	openDoors();
@@ -32,26 +31,26 @@ function enter() {
 
 	// Style Changes
 	var body = document.body;
-	var mainContainer = document.querySelector('div#opening-screen-container');
+	var openingContainer = document.querySelector('div#opening-screen-container');
 	var castleContainer = document.querySelector('div#castle-container');
 	var loader = document.querySelector("#loader");
 	var mountains = document.querySelector('#opening-screen-background');
 
 
 	// Chrome for Android bug workaround
-	//if (/.*Android.*Chrome.*/i.test(navigator.userAgent)) {
-	//	var waitTime = 4000;
-	//} else {
-	//	var waitTime = 2000;
-	//}
-	var waitTime = 2000;
+	// if (/.*Android.*Chrome.*/i.test(navigator.userAgent)) {
+	// 	var waitTime = 4000;
+	// } else {
+	// 	var waitTime = 2000;
+	// }
+
 	if (safariCheck) {
 		body.style.perspectiveOrigin = `50% ${originY}%`;
 	}
 	openingContainer.style.perspectiveOrigin = `50% ${originY}%`;
 	castleContainer.style.transform = `translateZ(${translateZ}em)`;
 	mountains.style.transform = `translateX(-50%) translateZ(7em)`;
-	castleFadeOut(mainContainer, loader, waitTime);
+	castleFadeOut(openingContainer, loader, 2000);
 }
 
 function originYCalc(translateZ, perspective) {
@@ -65,17 +64,28 @@ function originYCalc(translateZ, perspective) {
 	// dist = Dist between originY pt and center of door
 	var dist = ( (doorCenter - 1)*castleHeight + screenHeight/2 ) / (zoomFactor - 1);
 
-	// height of pt from the top (+2 is a correction to account for translation)
-	var originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight  +  2;
+	var originY = 100 * ( dist + (doorCenter - 1)*castleHeight + screenHeight ) / screenHeight  -  3;
 	return originY;
 }
 
 function castleFadeOut(element, loader, time) {
 	element.style.opacity = 0;
 	setTimeout(function() { 
+		if (safariCheck) { body.style.perspectiveOrigin = '50% 50%'; }
+
 		element.style.display = "none";
 		overlay = document.querySelector('#menu-overlay');
 		overlay.style.opacity = 0;
+		setTimeout(descFadeOut, 2000);
 		setTimeout(function() { overlay.style.display = "none"; }, 1000);
 	}, time);
+}
+
+// Menu Description Fade out
+function descFadeOut() {
+	descriptions = document.querySelectorAll(".description");
+
+	for (var description of descriptions) {
+		description.style.opacity = 0;
+	}
 }

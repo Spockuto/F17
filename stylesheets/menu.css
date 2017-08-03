@@ -7,7 +7,6 @@
 
 #menu-overlay {
   background-color: black;
-  opacity: 0;
   /*z-index: -75;*/
   z-index: 750;
   transition: opacity 1s;
@@ -112,7 +111,7 @@ img#ninja:hover {
 
 /*CSS for mobile version*/
 .mobile-icon-shields {
-  width: 30%;
+  width: 25%;
   margin: 30px;
 }
 
@@ -135,12 +134,12 @@ img#ninja:hover {
 /*TEXT*/
 div.description {
   position: absolute;
-  text-align : center !important;
   font-family: GangOfThree;
   font-size: 2em;
   text-shadow: 0 0 10px white, 0 0 40px white;
   z-index: 100;
   transform: translateX(-50%);
+  transition: opacity 0.4s;
 }
 
 div#ninja-text {
