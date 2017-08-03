@@ -44,7 +44,7 @@ function enter() {
 	//} else {
 	//	var waitTime = 2000;
 	//}
-
+	var waitTime = 2000;
 	if (safariCheck) {
 		body.style.perspectiveOrigin = `50% ${originY}%`;
 	}
