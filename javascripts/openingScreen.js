@@ -39,11 +39,11 @@ function enter() {
 
 
 	// Chrome for Android bug workaround
-	if (/.*Android.*Chrome.*/i.test(navigator.userAgent)) {
-		var waitTime = 4000;
-	} else {
-		var waitTime = 2000;
-	}
+	//if (/.*Android.*Chrome.*/i.test(navigator.userAgent)) {
+	//	var waitTime = 4000;
+	//} else {
+	//	var waitTime = 2000;
+	//}
 
 	if (safariCheck) {
 		body.style.perspectiveOrigin = `50% ${originY}%`;
