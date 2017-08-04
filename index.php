@@ -1,8 +1,8 @@
-<?php
+<!--<?php
   $TEMPLATEBROWSERPATH = ".";
   $ACTIONBARMODULE = "";
   $ACTIONBARPAGE = "";
-?>
+?>-->
 <!DOCTYPE html>
 <html>
 <head>
