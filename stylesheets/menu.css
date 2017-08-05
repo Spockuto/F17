@@ -15,6 +15,7 @@
 #menu-background-container {
   top: 50%;
   z-index: -1000;
+  transform: translateZ(-12em);
 }
 
 img#menu-background {
@@ -138,6 +139,7 @@ div.description {
   font-size: 2em;
   text-shadow: 0 0 10px white, 0 0 40px white;
   z-index: 100;
+  opacity: 0.2;
   transform: translateX(-50%);
   transition: opacity 0.4s;
 }

@@ -1,8 +1,15 @@
+var safariCheck = /.*Safari.*/i.test(navigator.userAgent) && !/.*Chrome.*/i.test(navigator.userAgent);
 
-function holderOpenDoors(){
-	openDoors();
-	setTimeout(enter, 500);
+function nextState(event) {
+	var doorCondt1 = window.innerWidth/3 < event.clientX  && window.innerWidth/1.5 > event.clientX;
+	var doorCondt2 = window.innerHeight/3 < event.clientY && 5*window.innerHeight/6 > event.clientY;
+
+	if (doorCondt1 && doorCondt2) {
+		openDoors();
+		setTimeout(enter, 500);
+	}
 }
+
 function openDoors() {
 	var overlays = document.querySelectorAll('.door-overlay');
 	var leftDoor = document.querySelector('#door-left');
@@ -19,7 +26,6 @@ function openDoors() {
 
 function enter() {
 	// Different value for safari
-	safariCheck = /.*Safari.*/i.test(navigator.userAgent) && !/.*Chrome.*/i.test(navigator.userAgent);
 	if (safariCheck) {
 		var translateZ = 16;
 	} else {
@@ -70,22 +76,13 @@ function originYCalc(translateZ, perspective) {
 
 function castleFadeOut(element, loader, time) {
 	element.style.opacity = 0;
+	document.body.onclick = null;
 	setTimeout(function() { 
-		if (safariCheck) { body.style.perspectiveOrigin = '50% 50%'; }
+		if (safariCheck) { document.body.style.perspectiveOrigin = '50% 50%'; }
 
 		element.style.display = "none";
 		overlay = document.querySelector('#menu-overlay');
 		overlay.style.opacity = 0;
-		setTimeout(descFadeOut, 2000);
 		setTimeout(function() { overlay.style.display = "none"; }, 1000);
 	}, time);
-}
-
-// Menu Description Fade out
-function descFadeOut() {
-	descriptions = document.querySelectorAll(".description");
-
-	for (var description of descriptions) {
-		description.style.opacity = 0;
-	}
 }

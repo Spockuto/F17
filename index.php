@@ -106,7 +106,7 @@
       <img id="castle" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monastery.svg" alt="castle">
       <img id="castle-mobile" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monasterymobile.svg" alt="castle">
 
-      <div id="castle-door-container" onclick="holderOpenDoors()">
+      <div id="castle-door-container">
         <div class="door"  id="door-left">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Left.svg" alt="door">
           <div class="door-overlay"></div>

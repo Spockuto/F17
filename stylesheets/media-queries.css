@@ -24,7 +24,7 @@
 
   img#menu-background {
     width: initial;
-    height: 100vh;
+    height: 160vh;
   }
 }
 
@@ -45,6 +45,12 @@
   img#dojo-mobile {
     width: initial;
     height: 160vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.description {
+    font-size: 1.5em;
   }
 }
 
