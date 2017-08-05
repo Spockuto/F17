@@ -144,21 +144,6 @@ div.description {
   transition: opacity 0.4s;
 }
 
-div#ninja-text {
-  top: -10vh;
-}
-div#sponsors-text {
-  top: 15vh;
-}
-div#contacts-text {
-  top: 15vh;
-}
-div#table-text {
-  top: -5vh;
-}
-div#traindummy-text {
-  top: -5vh;
-}
 
 /*TEXT Mobile - TEMP*/
 div.description-mobile {
