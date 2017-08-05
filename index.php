@@ -120,20 +120,22 @@
       <div id="alert">
         Click to Enter the Dojo
       </div>
-      <div class= "boiler" id="boiler">
-       <div class="fbtwitter">
-         <div id="fb-root"></div>
-          <div class="instagram"><a href="https://www.instagram.com/festember/?ref=badge"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></div>
-         <a href="https://twitter.com/festember" class="twitter-follow-button" data-show-count="false" style="position:absolute;bottom:30px;left:20px;">Follow @festember</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-         <div class="fb-like" data-href="https://facebook.com/festember" data-width="100px" style="position:absolute;bottom:20px;left:20px;" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-       </div>
-       <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored login" style="z-index:99999">
+
+
+    <div class= "boiler" id="boiler">
+      <div class="fbtwitter">
+          <div id="fb-root"></div>
+           <div class="instagram"><a href="https://www.instagram.com/festember/?ref=badge"><img src="//badges.instagram.com/ static/images/ig-badge-view-24.png" alt="Instagram" /></a></div> 
+          <a href="https://twitter.com/festember" class="twitter-follow-but ton" data-show-count="false" style="position: absolute;bottom:30px;left:20px;">Follow @festember</a><script a sync src="//platform.twitter.com/widgets.js"  charset ="utf-8"></script> 
+          <div class="fb-like" data-href="https://facebook.com/festember" data-width="100px" style="position:absolute;bo ttom:20 px;left:20px;" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share=" true"></div>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored login" style="z-index:99999">
         <i class="material-icons">add</i>
       </button>
     </div>
     <footer class="footer">
       Made with <font color="red">&hearts;</font> By <a href="http://delta.nitt.edu" style="color:#ff0000" target="_blank">Delta Force</a>. Designed by <a href="http://behance.net/festember" style="color:#ff0000" target="_blank">Design Team</a>.
-  </footer>
+    </footer>
 
     </div>
   </div>
@@ -149,23 +151,26 @@
     <img class="dojo" id="dojo-laptop" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Dojo.svg" alt="Dojo">
     <img class="dojo" id="dojo-mobile" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/DojoMobile.svg" alt="DojoMobile">
 
-    <div class="svg-container" id="front-dojo-container">
-      <div class="description" id="traindummy-text"> Events</div>
-      <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/events';" id="traindummy" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/TrainingDummy.svg" alt="Dojo" 
-          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+    <div class="svg-container" id="positioning-container">
+      <div class="svg-container" id="front-dojo-container">
+        <div class="description" id="traindummy-text"> Events</div>
+        <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/events';" id="traindummy"    src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/TrainingDummy.svg" alt="Dojo" 
+            onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
 
-      <div class="description" id="table-text">Hospitality</div>
-      <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/hospitality';"id="table" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Hospitality.svg" alt="Dojo" 
-          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+        <div class="description" id="table-text">Hospitality</div>
+        <img class="menu-svgs front-svgs" onclick="window.location.href='https://festember.com/17/home/hospitality';"id="table"     src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Hospitality.svg" alt="Dojo" 
+            onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+      </div>
     </div>
+
     <div class="svg-container" id="back-dojo-container">
       <div class="description" id="contacts-text">Contacts</div>
-      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/contacts';"id="contacts" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Contacts.svg" alt="Dojo" 
-          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/contacts';" id="contacts"        src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Contacts.svg" alt="Dojo" 
+            onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
 
       <div class="description" id="sponsors-text">Sponsors</div>
-      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/sponsors';" id="sponsors" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Sponsors.svg" alt="Dojo" 
-          onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
+      <img class="menu-svgs shield" onclick="window.location.href='https://festember.com/17/home/sponsors';" id="sponsors"        src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Sponsors.svg" alt="Dojo" 
+            onmouseover="showText(this.id)" onmouseout="hideText(this.id)">
 
       <div class="description" id="ninja-text">Highlights</div>
       <img class="menu-svgs" onclick="window.location.href='https://festember.com/17/home/highlights';" id="ninja" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Highlights.png" alt="Dojo" 

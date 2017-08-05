@@ -9,6 +9,7 @@ function menuSizeChange() {
 }
 
 function frontChange() {
+	var frontContainer = document.querySelector("div#front-dojo-container");
 	var dojo = document.querySelector("#dojo-laptop");
 	var trainDummy = document.querySelector("#traindummy");
 	var table = document.querySelector("#table");
@@ -19,6 +20,7 @@ function frontChange() {
 	var dojoWidth = dojo.offsetWidth;
 	var dojoHeight = dojo.offsetHeight;
 
+	// Dimentions, X-Axis positioning
 	trainDummy.style.left = -dojoWidth/5 + "px";
 	trainDummy.style.height = dojoHeight/3.7 + "px";
 	table.style.left = dojoWidth/5 + "px";
@@ -28,6 +30,9 @@ function frontChange() {
 	trainDummyText.style.top = -dojoHeight/30 + "px";
 	tableText.style.left = dojoWidth/5 + "px";
 	tableText.style.top = -dojoHeight/30 + "px";
+
+	// Y-axis positioning
+	frontContainer.style.top = dojoHeight/3 + "px";
 }
 
 function shieldDistChange() {

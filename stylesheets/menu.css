@@ -50,9 +50,15 @@ img#dojo-mobile {
   transition: opacity 2s;  
 }
 
+#positioning-container {
+  top: 50%;
+  perspective: 20em;
+  perspective-origin: 0% 0%;
+}
+
 #front-dojo-container {
-  bottom: -10%;
-  transform: translateZ(2.5em);
+  left: 0%;
+  transform: translateZ(3.5em);
 }
 
 #back-dojo-container {
