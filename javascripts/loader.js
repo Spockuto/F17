@@ -2,9 +2,6 @@ function loaderChange() {
 	setTimeout(function() {
 		loaderFadeOut(document.querySelector("#loader"), 500);
 	}, 500);
-
-	document.body.onclick = "nextState(event)";
-	document.body.setAttribute('onclick', "nextState(event)");
 }
 
 function loaderFadeOut(element, time) {

@@ -5,6 +5,10 @@
   z-index: -100;
 }
 
+div.noclick {
+  pointer-events: none;
+}
+
 #menu-overlay {
   background-color: black;
   /*z-index: -75;*/

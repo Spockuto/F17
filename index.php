@@ -47,8 +47,8 @@
 
 <body oncontextmenu="return false;" onload="loaderChange(); menuSizeChange();">
     
-    <div class="overlay ease" style="display:none;"></div>
-    <div class="holder ease" style="display:none;">
+    <div class="overlay ease" style="display: none; pointer-events: visible;"></div>
+    <div class="holder ease" style="display: none; pointer-events: visible;">
      <div class='actions'>
        <?php echo $ACTIONBARMODULE; ?>
        <?php echo $ACTIONBARPAGE; ?>
@@ -106,7 +106,7 @@
       <img id="castle" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monastery.svg" alt="castle">
       <img id="castle-mobile" class="monastery" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Monasterymobile.svg" alt="castle">
 
-      <div id="castle-door-container">
+      <div id="castle-door-container" onclick="nextState()">
         <div class="door"  id="door-left">
           <img class="door-img" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Door-Left.svg" alt="door">
           <div class="door-overlay"></div>
@@ -122,30 +122,30 @@
       </div>
 
 
-    <div class= "boiler" id="boiler">
-      <div class="fbtwitter">
-          <div id="fb-root"></div>
-           <div class="instagram"><a href="https://www.instagram.com/festember/?ref=badge"><img src="//badges.instagram.com/ static/images/ig-badge-view-24.png" alt="Instagram" /></a></div> 
-          <a href="https://twitter.com/festember" class="twitter-follow-but ton" data-show-count="false" style="position: absolute;bottom:30px;left:20px;">Follow @festember</a><script a sync src="//platform.twitter.com/widgets.js"  charset ="utf-8"></script> 
-          <div class="fb-like" data-href="https://facebook.com/festember" data-width="100px" style="position:absolute;bo ttom:20 px;left:20px;" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share=" true"></div>
+      <div class= "boiler" id="boiler">
+        <div class="fbtwitter">
+         <div id="fb-root"></div>
+          <div class="instagram"><a href="https://www.instagram.com/festember/?ref=badge"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></div>
+         <a href="https://twitter.com/festember" class="twitter-follow-button" data-show-count="false" style="position:absolute;bottom:30px;left:20px;">Follow @festember</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+         <div class="fb-like" data-href="https://facebook.com/festember" data-width="100px" style="position:absolute;bottom:20px;left:20px;" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        </div>
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored login" style="z-index:99999">
+          <i class="material-icons">add</i>
+        </button>
       </div>
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored login" style="z-index:99999">
-        <i class="material-icons">add</i>
-      </button>
-    </div>
-    <footer class="footer">
-      Made with <font color="red">&hearts;</font> By <a href="http://delta.nitt.edu" style="color:#ff0000" target="_blank">Delta Force</a>. Designed by <a href="http://behance.net/festember" style="color:#ff0000" target="_blank">Design Team</a>.
-    </footer>
+      <footer class="footer">
+        Made with <font color="red">&hearts;</font> By <a href="http://delta.nitt.edu" style="color:#ff0000" target="_blank">Delta Force</a>. Designed by <a href="http://behance.net/festember" style="color:#ff0000" target="_blank">Design Team</a>.
+      </footer>
 
     </div>
   </div>
 
 
   <!-- MENU -->
-  <div class="state-container" id="menu-background-container">
+  <div class="state-container noclick" id="menu-background-container">
     <img src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Mountains2.jpg" alt="mountains" class="background" id="menu-background">
   </div>
-  <div class="state-container" id="menu-overlay"></div>
+  <div class="state-container noclick" id="menu-overlay"></div>
 
   <div class="state-container" id="menu-container">
     <img class="dojo" id="dojo-laptop" src="<?php echo $TEMPLATEBROWSERPATH; ?>/images/Dojo.svg" alt="Dojo">
